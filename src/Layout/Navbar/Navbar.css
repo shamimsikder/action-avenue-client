@@ -1,0 +1,9 @@
+a.active {
+    color: white;
+}
+
+.menu  a:hover {
+    background-color: #65C3C8;
+    border-radius: 0px;
+    color: white;
+  }
