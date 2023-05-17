@@ -7,7 +7,7 @@ const Login = () => {
             <div className="bg-white rounded-lg shadow-md w-96 p-8 animate__animated animate__fadeInDown">
                 
                 <div className="flex items-center justify-center mb-4">
-                    <img src="/logo.svg" alt="Logo" className="h-8 mr-2" />
+                    <img src="zyro-image.png" alt="Logo" className="h-8 mr-2" />
                     <h1 className="text-2xl font-bold text-gray-900">Log in</h1>
                 </div>
                 
