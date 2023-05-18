@@ -1,7 +1,11 @@
 import React from 'react';
 import { FaGithub, FaGoogle } from 'react-icons/fa';
+import useTitle from '../../Hooks/useTitle';
 
 const Login = () => {
+
+    useTitle("Login")
+
     return (
         <div className="flex justify-center items-center h-screen">
             <div className="bg-white rounded-lg shadow-md w-96 p-8 animate__animated animate__fadeInDown">
