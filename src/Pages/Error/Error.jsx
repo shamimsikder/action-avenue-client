@@ -1,6 +1,6 @@
 import React from 'react';
 import Lottie from "lottie-react";
-import error from '../../../public/error-404-page.json'
+import error from '../../assets/error-404-page.json'
 import { Link } from 'react-router-dom';
 
 const Error = () => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import Lottie from "lottie-react";
-import blogs from '../../../public/blogs.json'
+import blogs from '../../assets/blogs.json'
 import useTitle from '../../Hooks/useTitle';
 
 const Blogs = () => {
@@ -10,14 +10,14 @@ const Blogs = () => {
     return (
         <div className="w-full max-w-7xl mx-auto mt-20 mb-20">
 
-            <h2 className='font-semibold text-5xl text-center mb-10'>Our Latest Blogs</h2>
+            <h2 className='font-semibold text-5xl text-center'>Our Latest Blogs</h2>
             
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-5 items-center justify-center'>
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-5 items-center justify-center mt-10'>
                             
                 <div>
 
                     <div tabIndex={0} className="collapse collapse-arrow border border-[#65C3C8] mt-5 rounded-md text-black">
-                        <div className="collapse-title text-xl font-medium">
+                        <div className="collapse-title text-xl font-semibold">
                             What is an access token and refresh token? How do they work and where should we store them on the client-side?
                         </div>
                         <div className="collapse-content">
@@ -30,7 +30,7 @@ const Blogs = () => {
                     </div>
 
                     <div tabIndex={0} className="collapse collapse-arrow border border-[#65C3C8] mt-5 rounded-md text-black">
-                        <div className="collapse-title text-xl font-medium">
+                        <div className="collapse-title text-xl font-semibold">
                             Compare SQL and NoSQL databases?
                         </div>
                         <div className="collapse-content">
@@ -43,7 +43,7 @@ const Blogs = () => {
                     </div>
 
                     <div tabIndex={0} className="collapse collapse-arrow border border-[#65C3C8] mt-5 rounded-md text-black">
-                        <div className="collapse-title text-xl font-medium">
+                        <div className="collapse-title text-xl font-semibold">
                             What is express js? What is Nest JS?
                         </div>
                         <div className="collapse-content">
@@ -57,7 +57,7 @@ const Blogs = () => {
                     </div>
 
                     <div tabIndex={0} className="collapse collapse-arrow border border-[#65C3C8] mt-5 rounded-md text-black">
-                        <div className="collapse-title text-xl font-medium">
+                        <div className="collapse-title text-xl font-semibold">
                             What is MongoDB aggregate and how does it work?
                         </div>
                         <div className="collapse-content">
