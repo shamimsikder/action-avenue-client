@@ -9,6 +9,7 @@ import AllToys from "../Pages/AllToys/AllToys";
 import MyToys from "../Pages/MyToys/MyToys";
 import AddAToy from "../Pages/AddAToy/AddAToy";
 import SignUp from "../Pages/SignUp/SignUp";
+import Error from "../Pages/Error/Error";
   
   const router = createBrowserRouter([
     {
@@ -47,6 +48,10 @@ import SignUp from "../Pages/SignUp/SignUp";
 
       ]
     },
+    {
+      path: '*',
+      element: <Error></Error>
+    }
   ]);
 
   export default router
