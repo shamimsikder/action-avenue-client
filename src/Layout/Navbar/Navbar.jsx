@@ -4,7 +4,7 @@ import "./Navbar.css"
 
 const Navbar = () => {
     return (
-        <div>
+        <div className='sticky top-0'>
             <div className="navbar bg-base-100 w-full max-w-7xl mx-auto">
                 
                 <div className="navbar-start">
@@ -39,7 +39,11 @@ const Navbar = () => {
                 </div>
                 
                 <div className="navbar-end">
-                    <button className="bg-[#65C3C8] px-3 py-2 rounded-lg text-white">Login</button>
+                    <Link to="/login">
+                    
+                        <button className="bg-[#65C3C8] px-3 py-2 rounded-lg text-white">Login</button>
+
+                    </Link>
                 </div>
 
             </div>
