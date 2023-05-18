@@ -7,7 +7,7 @@ const Footer = () => {
         
             <div className='flex flex-col items-center gap-5'>
 
-                <div className='grid grid-flow-col gap-4 text-lg'>
+                <div className='grid grid-flow-col gap-4 text-md md:text-lg'>
                     <NavLink exact to="/">Home</NavLink>
                     <NavLink to="/all-toys">All Toys</NavLink>
                     <NavLink to="/my-toys">My Toys</NavLink>
