@@ -4,6 +4,7 @@ import Banner from './Banner';
 import ImageGallery from './ImageGallery';
 import ShopByCategory from './ShopByCategory/ShopByCategory';
 import TrendingThisMonth from './TrendingThisMonth';
+import OurServices from './OurServices';
 
 const Home = () => {
 
@@ -15,6 +16,7 @@ const Home = () => {
             <ImageGallery></ImageGallery>
             <ShopByCategory></ShopByCategory>
             <TrendingThisMonth></TrendingThisMonth>
+            <OurServices></OurServices>
         </div>
     );
 };
