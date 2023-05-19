@@ -10,21 +10,35 @@
                 "picture": "https://i.ibb.co/TrR1jKp/rsz-tony-luginsland-g5hbswb-dfc-unsplash.jpg",
                 "name": "Spider-Man",
                 "price": "$19.99",
-                "rating": 4.5
+                "rating": 4.5,
+                "sellerName": "Tony's Toy Store",
+                "sellerEmail": "tonystoys@example.com",
+                "quantity": 10,
+                "description": "Bring home the friendly neighborhood superhero with this highly detailed Spider-Man action figure. Made with premium quality materials and featuring articulation for various poses. Perfect for Marvel fans and collectors."
+  
               },
               {
                 "id": 2,
                 "picture": "https://i.ibb.co/yY7Srn6/rsz-1gabriel-tovar-otkandgugaa-unsplash.jpg",
                 "name": "Hulk",
                 "price": "$24.99",
-                "rating": 4.2
+                "rating": 4.2,
+                "sellerName": "Tony's Toy Store",
+                "sellerEmail": "tonystoys@example.com",
+                "quantity": 10,
+                "description": "Bring home the friendly neighborhood superhero with this highly detailed Spider-Man action figure. Made with premium quality materials and featuring articulation for various poses. Perfect for Marvel fans and collectors."
               },
               {
                 "id": 3,
                 "picture": "https://i.ibb.co/TrR1jKp/rsz-tony-luginsland-g5hbswb-dfc-unsplash.jpg",
                 "name": "Spider-Man",
                 "price": "$19.99",
-                "rating": 4.5
+                "rating": 4.5,
+                "sellerName": "Tony's Toy Store",
+                "sellerEmail": "tonystoys@example.com",
+                "quantity": 10,
+                "description": "Bring home the friendly neighborhood superhero with this highly detailed Spider-Man action figure. Made with premium quality materials and featuring articulation for various poses. Perfect for Marvel fans and collectors."
+
               }
             ]
           },
@@ -36,21 +50,36 @@
                 "picture": "https://i.ibb.co/WHtts67/rsz-1vishwanth-p-yojfsiuifbw-unsplash.jpg",
                 "name": "Deadpool",
                 "price": "$14.99",
-                "rating": 4.8
+                "rating": 4.8,
+                "sellerName": "Logan's Collectibles",
+                "sellerEmail": "loganscollectibles@example.com",
+                "quantity": 12,
+                "description": "Unleash the fierce mutant power of Wolverine with this action figure. With retractable claws and incredible healing abilities, Wolverine is ready to take on any enemy. A must-have for X-Men fans."
+
               },
               {
                 "id": 5,
                 "picture": "https://i.ibb.co/1JcBbwV/rsz-x-diamjan221992-c.jpg",
                 "name": "Professor X",
                 "price": "$29.99",
-                "rating": 4.6
+                "rating": 4.6,
+                "sellerName": "Logan's Collectibles",
+                "sellerEmail": "loganscollectibles@example.com",
+                "quantity": 12,
+                "description": "Unleash the fierce mutant power of Wolverine with this action figure. With retractable claws and incredible healing abilities, Wolverine is ready to take on any enemy. A must-have for X-Men fans."
+
               },
               {
                 "id": 6,
                 "picture": "https://i.ibb.co/WHtts67/rsz-1vishwanth-p-yojfsiuifbw-unsplash.jpg",
                 "name": "Deadpool",
                 "price": "$14.99",
-                "rating": 4.8
+                "rating": 4.8,
+                "sellerName": "Logan's Collectibles",
+                "sellerEmail": "loganscollectibles@example.com",
+                "quantity": 12,
+                "description": "Unleash the fierce mutant power of Wolverine with this action figure. With retractable claws and incredible healing abilities, Wolverine is ready to take on any enemy. A must-have for X-Men fans."
+
               }
             ]
           },
@@ -62,21 +91,36 @@
                 "picture": "https://i.ibb.co/Z6VrxtR/rsz-gabriel-tovar-thuqumayhey-unsplash.jpg",
                 "name": "Star-Lord",
                 "price": "$14.99",
-                "rating": 4.8
+                "rating": 4.8,
+                "sellerName": "Galactic Collectibles",
+                "sellerEmail": "galacticcollectibles@example.com",
+                "quantity": 15,
+                "description": "Embark on cosmic adventures with this Star-Lord action figure inspired by the Guardians of the Galaxy. With his signature helmet and blasters, Star-Lord is ready to lead his team into intergalactic battles."
+      
               },
               {
                 "id": 8,
                 "picture": "https://i.ibb.co/bWYMCJz/rsz-1groot.jpg",
                 "name": "Groot",
                 "price": "$29.99",
-                "rating": 4.6
+                "rating": 4.6,
+                "sellerName": "Treehouse Toys",
+                "sellerEmail": "treehousetoys@example.com",
+                "quantity": 20,
+                "description": "I am Groot! Bring home the lovable tree-like creature with this Groot action figure. Standing tall and featuring intricate detailing, it's a must-have collectible for fans of Guardians of the Galaxy."
+
               },
               {
                 "id": 9,
                 "picture": "https://i.ibb.co/Z6VrxtR/rsz-gabriel-tovar-thuqumayhey-unsplash.jpg",
                 "name": "Star-Lord",
                 "price": "$14.99",
-                "rating": 4.8
+                "rating": 4.8,
+                "sellerName": "Galactic Collectibles",
+                "sellerEmail": "galacticcollectibles@example.com",
+                "quantity": 15,
+                "description": "Embark on cosmic adventures with this Star-Lord action figure inspired by the Guardians of the Galaxy. With his signature helmet and blasters, Star-Lord is ready to lead his team into intergalactic battles."
+      
               }
             ]
           }
@@ -93,21 +137,36 @@
                 "picture": "https://i.ibb.co/mXrvW3v/rsz-joker-action-figures.jpg",
                 "name": "Joker",
                 "price": "$12.99",
-                "rating": 4.4
+                "rating": 4.4,
+                "sellerName": "Gotham Collectibles",
+                "sellerEmail": "gothamcollectibles@example.com",
+                "quantity": 10,
+                "description": "Unleash chaos with this Joker action figure inspired by DC's Secret Society. Complete with his signature grin and iconic purple suit, it's a must-have for fans of the Clown Prince of Crime."
+      
               },
               {
                 "id": 11,
                 "picture": "https://i.ibb.co/SJBDhZ9/black-adam.jpg",
                 "name": "Black Adam",
                 "price": "$17.99",
-                "rating": 4.7
+                "rating": 4.7,
+                "sellerName": "Kahndaq Emporium",
+                "sellerEmail": "kahndaqemporium@example.com",
+                "quantity": 8,
+                "description": "Harness the immense power of Black Adam with this action figure. Featuring his distinctive lightning-shaped chest emblem and empowered by ancient magic, Black Adam is a formidable adversary."
+      
               },
               {
                 "id": 12,
                 "picture": "https://i.ibb.co/SJBDhZ9/black-adam.jpg",
                 "name": "Black Adam",
                 "price": "$17.99",
-                "rating": 4.7
+                "rating": 4.7,
+                "sellerName": "Kahndaq Emporium",
+                "sellerEmail": "kahndaqemporium@example.com",
+                "quantity": 8,
+                "description": "Harness the immense power of Black Adam with this action figure. Featuring his distinctive lightning-shaped chest emblem and empowered by ancient magic, Black Adam is a formidable adversary."
+
               }
             ]
           },
@@ -119,21 +178,36 @@
                 "picture": "https://i.ibb.co/FhqTcVq/rsz-1andrew-reshetov-xzeqlpqsldi-unsplash.jpg",
                 "name": "Batman",
                 "price": "$22.99",
-                "rating": 4.3
+                "rating": 4.3,
+                "sellerName": "Wayne Enterprises",
+                "sellerEmail": "wayneenterprises@example.com",
+                "quantity": 7,
+                "description": "Unleash the Dark Knight with this Batman action figure inspired by the Justice League. Featuring his iconic black suit and bat symbol, it's the perfect addition to your collection."
+      
               },
               {
                 "id": 14,
                 "picture": "https://i.ibb.co/m5Vq4CY/jl.jpg",
                 "name": "Justice League",
                 "price": "$27.99",
-                "rating": 4.9
+                "rating": 4.9,
+                "sellerName": "Superhero Central",
+                "sellerEmail": "superherocentral@example.com",
+                "quantity": 3,
+                "description": "Assemble the mighty Justice League with this action figure set. Featuring Batman, Superman, Wonder Woman, and more, it's a must-have for fans of the iconic superhero team."
+      
               },
               {
                 "id": 15,
                 "picture": "https://i.ibb.co/FhqTcVq/rsz-1andrew-reshetov-xzeqlpqsldi-unsplash.jpg",
                 "name": "Batman",
                 "price": "$22.99",
-                "rating": 4.3
+                "rating": 4.3,
+                "sellerName": "Wayne Enterprises",
+                "sellerEmail": "wayneenterprises@example.com",
+                "quantity": 7,
+                "description": "Unleash the Dark Knight with this Batman action figure inspired by the Justice League. Featuring his iconic black suit and bat symbol, it's the perfect addition to your collection."
+      
               }
             ]
           },
@@ -145,21 +219,36 @@
                 "picture": "https://i.ibb.co/ZVCCyZZ/rsz-ss2.jpg",
                 "name": "Peacemaker",
                 "price": "$22.99",
-                "rating": 4.3
+                "rating": 4.3,
+                "sellerName": "Belle Reve Collectibles",
+                "sellerEmail": "bellerevecollectibles@example.com",
+                "quantity": 6,
+                "description": "Join the Suicide Squad with this action figure of Peacemaker. Based on the DC Comics character, it features his distinctive silver helmet and deadly weapons. A must-have for fans of the antihero team."
+      
               },
               {
                 "id": 17,
                 "picture": "https://i.ibb.co/cCMx9QS/rsz-1ss.jpg",
                 "name": "Suicide Squad",
                 "price": "$27.99",
-                "rating": 4.9
+                "rating": 4.9,
+                "sellerName": "Belle Reve Collectibles",
+                "sellerEmail": "bellerevecollectibles@example.com",
+                "quantity": 6,
+                "description": "Join the Suicide Squad with this action figure of Peacemaker. Based on the DC Comics character, it features his distinctive silver helmet and deadly weapons. A must-have for fans of the antihero team."
+      
               },
               {
                 "id": 18,
                 "picture": "https://i.ibb.co/ZVCCyZZ/rsz-ss2.jpg",
                 "name": "Peacemaker",
                 "price": "$22.99",
-                "rating": 4.3
+                "rating": 4.3,
+                "sellerName": "Belle Reve Collectibles",
+                "sellerEmail": "bellerevecollectibles@example.com",
+                "quantity": 6,
+                "description": "Join the Suicide Squad with this action figure of Peacemaker. Based on the DC Comics character, it features his distinctive silver helmet and deadly weapons. A must-have for fans of the antihero team."
+      
               }
             ]
           }
@@ -176,21 +265,36 @@
                 "picture": "https://i.ibb.co/vYHDXjn/rsz-1jeet-dhanoa-sr1badlrskm-unsplash.jpg",
                 "name": "Goku-1",
                 "price": "$32.99",
-                "rating": 4.1
+                "rating": 4.1,
+                "sellerName": "Anime Emporium",
+                "sellerEmail": "animeemporium@example.com",
+                "quantity": 5,
+                "description": "Unleash the power of Goku with this action figure inspired by Dragon Ball Z. Featuring his iconic orange and blue gi, it's a must-have for fans of the Saiyan warrior."
+      
               },
               {
                 "id": 20,
                 "picture": "https://i.ibb.co/ZJkj34d/rsz-1sysoda-chau-smen1eul9de-unsplash.jpg",
                 "name": "Goku-2",
                 "price": "$39.99",
-                "rating": 4.7
+                "rating": 4.7,
+                "sellerName": "Anime Emporium",
+                "sellerEmail": "animeemporium@example.com",
+                "quantity": 5,
+                "description": "Unleash the power of Goku with this action figure inspired by Dragon Ball Z. Featuring his iconic orange and blue gi, it's a must-have for fans of the Saiyan warrior."
+      
               },
               {
                 "id": 21,
                 "picture": "https://i.ibb.co/vYHDXjn/rsz-1jeet-dhanoa-sr1badlrskm-unsplash.jpg",
                 "name": "Goku-1",
                 "price": "$32.99",
-                "rating": 4.1
+                "rating": 4.1,
+                "sellerName": "Anime Emporium",
+                "sellerEmail": "animeemporium@example.com",
+                "quantity": 5,
+                "description": "Unleash the power of Goku with this action figure inspired by Dragon Ball Z. Featuring his iconic orange and blue gi, it's a must-have for fans of the Saiyan warrior."
+      
               }
             ]
           },
@@ -202,21 +306,36 @@
                 "picture": "https://i.ibb.co/fp835VY/rsz-1jay-nu-uoifiwek-unsplash.jpg",
                 "name": "Luffy",
                 "price": "$36.99",
-                "rating": 4.6
+                "rating": 4.6,
+                "sellerName": "Grand Line Treasures",
+                "sellerEmail": "grandlinetreasures@example.com",
+                "quantity": 7,
+                "description": "Set sail with Monkey D. Luffy, the captain of the Straw Hat Pirates. This action figure captures Luffy's adventurous spirit and determination to become the King of the Pirates."
+      
               },
               {
                 "id": 23,
                 "picture": "https://i.ibb.co/DgkBCBK/rsz-john-carlo-tubelleza-9fw3v71tq9q-unsplash.jpg",
                 "name": "One piece Collections",
                 "price": "$42.99",
-                "rating": 4.3
+                "rating": 4.3,
+                "sellerName": "Pirate Treasure Emporium",
+                "sellerEmail": "piratetreasureemporium@example.com",
+                "quantity": 3,
+                "description": "Embark on a grand adventure with this One Piece collections action figure set. It includes a variety of characters from the popular anime series, making it perfect for collectors."
+      
               },
               {
                 "id": 24,
                 "picture": "https://i.ibb.co/fp835VY/rsz-1jay-nu-uoifiwek-unsplash.jpg",
                 "name": "Luffy",
                 "price": "$36.99",
-                "rating": 4.6
+                "rating": 4.6,
+                "sellerName": "Grand Line Treasures",
+                "sellerEmail": "grandlinetreasures@example.com",
+                "quantity": 7,
+                "description": "Set sail with Monkey D. Luffy, the captain of the Straw Hat Pirates. This action figure captures Luffy's adventurous spirit and determination to become the King of the Pirates."
+      
               }
             ]
           },
@@ -228,21 +347,36 @@
                 "picture": "https://i.ibb.co/N7Knzm8/itadori-yuji.jpg",
                 "name": "Itadori Yuji",
                 "price": "$36.99",
-                "rating": 4.6
+                "rating": 4.6,
+                "sellerName": "Tokyo Jujutsu Store",
+                "sellerEmail": "tokyojujutsustore@example.com",
+                "quantity": 6,
+                "description": "Summon the power of Itadori Yuji with this action figure from Jujutsu Kaisen. Itadori's incredible strength and cursed energy make him a formidable fighter against supernatural threats."
+      
               },
               {
                 "id": 26,
                 "picture": "https://i.ibb.co/bX0TZCG/rsz-1gojo-satoru.jpg",
                 "name": "Gojo Satoru",
                 "price": "$42.99",
-                "rating": 4.3
+                "rating": 4.3,
+                "sellerName": "Tokyo Jujutsu Store",
+                "sellerEmail": "tokyojujutsustore@example.com",
+                "quantity": 6,
+                "description": "Summon the power of Itadori Yuji with this action figure from Jujutsu Kaisen. Itadori's incredible strength and cursed energy make him a formidable fighter against supernatural threats."
+      
               },
               {
                 "id": 27,
                 "picture": "https://i.ibb.co/N7Knzm8/itadori-yuji.jpg",
                 "name": "Itadori Yuji",
                 "price": "$36.99",
-                "rating": 4.6
+                "rating": 4.6,
+                "sellerName": "Tokyo Jujutsu Store",
+                "sellerEmail": "tokyojujutsustore@example.com",
+                "quantity": 6,
+                "description": "Summon the power of Itadori Yuji with this action figure from Jujutsu Kaisen. Itadori's incredible strength and cursed energy make him a formidable fighter against supernatural threats."
+      
               }
             ]
           }
