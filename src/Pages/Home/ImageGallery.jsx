@@ -1,7 +1,11 @@
 import React, { useEffect } from 'react';
 import { Slide, } from 'react-awesome-reveal';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const ImageGallery = () => {
+  
+  AOS.init();
 
   const images = [
     { id: 1, src: 'https://i.ibb.co/ctrJwwZ/rsz-mulyadi-qcyobglsgjm-unsplash.png', alt: 'Image 1' },
@@ -12,7 +16,11 @@ const ImageGallery = () => {
 
   return (
     <div className="w-full max-w-7xl mx-auto py-8">
-      <h1 className="text-2xl font-bold text-gray-800 mb-4">Image Gallery</h1>
+      
+      <div data-aos="fade-right" className='mb-10 text-center'>
+            <p className='text-5xl font-semibold'>Image Gallery</p>
+      </div>
+
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
 
         <div>
