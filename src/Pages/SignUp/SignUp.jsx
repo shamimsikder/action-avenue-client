@@ -3,6 +3,7 @@ import { FaGoogle } from 'react-icons/fa';
 import useTitle from '../../Hooks/useTitle';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Providers/AuthProviders';
+import { updateProfile } from 'firebase/auth';
 
 const SignUp = () => {
 

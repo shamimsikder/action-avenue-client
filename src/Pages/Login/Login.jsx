@@ -14,7 +14,9 @@ const Login = () => {
 
     useTitle("Login")
 
-    const handleLogIn = () => {
+    const handleLogIn = (event) => {
+
+        event.preventDefault()
 
         const form = event.target
         const email = form.email.value
