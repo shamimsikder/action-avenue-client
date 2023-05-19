@@ -46,11 +46,16 @@ const ShopByCategory = () => {
                                         </label>
                                         <input type="checkbox" id={`my-modal-${toy.id}`} className="modal-toggle" />
                                         <div className="modal">
-                                        <div className="modal-box relative flex items-center flex-col">
+                                        <div className="modal-box relative flex flex-col">
                                             <label htmlFor={`my-modal-${toy.id}`} className="btn btn-primary text-white btn-sm btn-circle absolute right-2 top-2">✕</label>
-                                            <img src={toy.picture} alt={toy.name} className="w-96 h-96 rounded-md object-cover mb-4"/>
-                                            <h3 className="text-lg font-bold">Congratulations random Internet user!</h3>
-                                            <p className="py-4 text-center">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
+                                            <img src={toy.picture} alt={toy.name} className="w-96 h-96 rounded-md mx-auto object-cover mb-4"/>
+                                            <h3 className="text-md "><span className='text-lg font-semibold'>Toy Name</span>: {toy.name}</h3>
+                                            <h3 className="text-lg"><span className='text-lg font-semibold'>Seller Name</span>: {toy.sellerName}</h3>
+                                            <h3 className="text-lg"><span className='text-lg font-semibold'>Seller Email</span>: {toy.sellerEmail}</h3>
+                                            <h3 className="text-lg"><span className='text-lg font-semibold'>Price</span>: {toy.price}</h3>
+                                            <h3 className="text-lg"><span className='text-lg font-semibold'>Quantity</span>: {toy.quantity}</h3>
+                                            <h3 className="text-lg"><span className='text-lg font-semibold'>Rating</span>: {toy.rating}</h3>
+                                            <p className="py-4">{toy.description}</p>
                                         </div>
                                         </div>
                                     </div>
