@@ -18,6 +18,13 @@
                 "name": "Hulk",
                 "price": "$24.99",
                 "rating": 4.2
+              },
+              {
+                "id": 1,
+                "picture": "https://i.ibb.co/TrR1jKp/rsz-tony-luginsland-g5hbswb-dfc-unsplash.jpg",
+                "name": "Spider-Man",
+                "price": "$19.99",
+                "rating": 4.5
               }
             ]
           },
@@ -37,6 +44,13 @@
                 "name": "Professor X",
                 "price": "$29.99",
                 "rating": 4.6
+              },
+              {
+                "id": 3,
+                "picture": "https://i.ibb.co/WHtts67/rsz-1vishwanth-p-yojfsiuifbw-unsplash.jpg",
+                "name": "Deadpool",
+                "price": "$14.99",
+                "rating": 4.8
               }
             ]
           },
@@ -56,6 +70,13 @@
                 "name": "Groot",
                 "price": "$29.99",
                 "rating": 4.6
+              },
+              {
+                "id": 5,
+                "picture": "https://i.ibb.co/Z6VrxtR/rsz-gabriel-tovar-thuqumayhey-unsplash.jpg",
+                "name": "Star-Lord",
+                "price": "$14.99",
+                "rating": 4.8
               }
             ]
           }
@@ -73,6 +94,13 @@
                 "name": "Joker",
                 "price": "$12.99",
                 "rating": 4.4
+              },
+              {
+                "id": 8,
+                "picture": "https://i.ibb.co/SJBDhZ9/black-adam.jpg",
+                "name": "Black Adam",
+                "price": "$17.99",
+                "rating": 4.7
               },
               {
                 "id": 8,
@@ -99,6 +127,13 @@
                 "name": "Justice League",
                 "price": "$27.99",
                 "rating": 4.9
+              },
+              {
+                "id": 9,
+                "picture": "https://i.ibb.co/FhqTcVq/rsz-1andrew-reshetov-xzeqlpqsldi-unsplash.jpg",
+                "name": "Batman",
+                "price": "$22.99",
+                "rating": 4.3
               }
             ]
           },
@@ -108,7 +143,7 @@
               {
                 "id": 11,
                 "picture": "https://i.ibb.co/ZVCCyZZ/rsz-ss2.jpg",
-                "name": "Toy 7",
+                "name": "Peacemaker",
                 "price": "$22.99",
                 "rating": 4.3
               },
@@ -118,6 +153,13 @@
                 "name": "Suicide Squad",
                 "price": "$27.99",
                 "rating": 4.9
+              },
+              {
+                "id": 11,
+                "picture": "https://i.ibb.co/ZVCCyZZ/rsz-ss2.jpg",
+                "name": "Peacemaker",
+                "price": "$22.99",
+                "rating": 4.3
               }
             ]
           }
@@ -142,6 +184,13 @@
                 "name": "Goku-2",
                 "price": "$39.99",
                 "rating": 4.7
+              },
+              {
+                "id": 13,
+                "picture": "https://i.ibb.co/vYHDXjn/rsz-1jeet-dhanoa-sr1badlrskm-unsplash.jpg",
+                "name": "Goku-1",
+                "price": "$32.99",
+                "rating": 4.1
               }
             ]
           },
@@ -161,6 +210,13 @@
                 "name": "One piece Collections",
                 "price": "$42.99",
                 "rating": 4.3
+              },
+              {
+                "id": 15,
+                "picture": "https://i.ibb.co/fp835VY/rsz-1jay-nu-uoifiwek-unsplash.jpg",
+                "name": "Luffy",
+                "price": "$36.99",
+                "rating": 4.6
               }
             ]
           },
@@ -180,6 +236,13 @@
                 "name": "Gojo Satoru",
                 "price": "$42.99",
                 "rating": 4.3
+              },
+              {
+                "id": 17,
+                "picture": "https://i.ibb.co/N7Knzm8/itadori-yuji.jpg",
+                "name": "Itadori Yuji",
+                "price": "$36.99",
+                "rating": 4.6
               }
             ]
           }
