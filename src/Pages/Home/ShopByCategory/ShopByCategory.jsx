@@ -29,9 +29,9 @@ const ShopByCategory = () => {
                     {category.subcategories.map((subcategory, subIndex) => (
                         <div key={subIndex}>
                             <h2 className="text-xl font-bold mb-4">{subcategory.name}</h2>
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                                 {subcategory.toys.map((toy) => (
-                                    <div data-aos="fade-up" key={toy.id} className="bg-white w-96 rounded-md shadow-md p-4 flex flex-col items-center">
+                                    <div data-aos="fade-up" key={toy.id} className="bg-white w-full md:w-96 rounded-md shadow-md p-4 flex flex-col items-center">
                                         <img src={toy.picture} alt={toy.name} className="w-96 h-96 rounded-md object-cover mb-4"/>
                                         <h3 className="text-lg font-bold mb-2">{toy.name}</h3>
                                         <p className="text-gray-600 mb-2">{toy.price}</p>
