@@ -41,9 +41,17 @@ const ShopByCategory = () => {
                                         <h3 className="text-lg font-bold mb-2">{toy.name}</h3>
                                         <p className="text-gray-600 mb-2">{toy.price}</p>
                                         <p className="text-gray-600 mb-2">Rating: {toy.rating}</p>
-                                        <button className="bg-[#65C3C8] hover:bg-[#529EA9] w-full text-white px-4 py-2 rounded-md" data-aos="fade-right" data-aos-duration="500">
+                                        <label className="bg-[#65C3C8] hover:bg-[#529EA9] w-full text-white px-4 py-2 rounded-md text-center cursor-pointer" htmlFor="my-modal-3" data-aos="fade-right" data-aos-duration="500">
                                             View Details
-                                        </button>
+                                        </label>
+                                        <input type="checkbox" id="my-modal-3" className="modal-toggle" />
+                                        <div className="modal">
+                                        <div className="modal-box relative">
+                                            <label htmlFor="my-modal-3" className="btn btn-primary text-white btn-sm btn-circle absolute right-2 top-2">✕</label>
+                                            <h3 className="text-lg font-bold">Congratulations random Internet user!</h3>
+                                            <p className="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
+                                        </div>
+                                        </div>
                                     </div>
                                 ))}
                             </div>
