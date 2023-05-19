@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 const ShopByCategory = () => {
   const [categories, setCategories] = useState([]);
 
@@ -9,6 +12,7 @@ const ShopByCategory = () => {
     fetch('categories.json')
       .then((res) => res.json())
       .then((data) => setCategories(data));
+      AOS.init();
   }, []);
 
   return (
@@ -27,14 +31,14 @@ const ShopByCategory = () => {
                             <h2 className="text-xl font-bold mb-4">{subcategory.name}</h2>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 {subcategory.toys.map((toy) => (
-                                    <div key={toy.id} className="bg-white w-96 rounded-md shadow-md p-4 flex flex-col items-center">
+                                    <div data-aos="fade-up" key={toy.id} className="bg-white w-96 rounded-md shadow-md p-4 flex flex-col items-center">
                                         <img src={toy.picture} alt={toy.name} className="w-96 h-96 rounded-md object-cover mb-4"/>
                                         <h3 className="text-lg font-bold mb-2">{toy.name}</h3>
                                         <p className="text-gray-600 mb-2">{toy.price}</p>
                                         <p className="text-gray-600 mb-2">Rating: {toy.rating}</p>
-                                        <a  href={toy.detailsLink}  target="_blank"  rel="noopener noreferrer"  className="bg-blue-500 text-white px-4 py-2 rounded-lg">
+                                        <button className="bg-[#65C3C8] hover:bg-[#529EA9] w-full text-white px-4 py-2 rounded-md" data-aos="fade-up" data-aos-duration="500">
                                             View Details
-                                        </a>
+                                        </button>
                                     </div>
                                 ))}
                             </div>
