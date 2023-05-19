@@ -1,5 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import 'aos/dist/aos.css';
+import AOS from 'aos';
+AOS.init();
 import {
   RouterProvider,
 } from "react-router-dom";

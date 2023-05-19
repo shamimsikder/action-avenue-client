@@ -13,14 +13,28 @@ const ImageGallery = () => {
   return (
     <div className="w-full max-w-7xl mx-auto py-8">
       <h1 className="text-2xl font-bold text-gray-800 mb-4">Image Gallery</h1>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-        {images.map((image) => (
-          <div className="rounded-lg overflow-hidden" key={image.id}>
-            <Slide duration={1000}>
-              <img src={image.src} alt={image.alt} className="w-full h-48 object-cover" />
-            </Slide>
-          </div>
-        ))}
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+
+        <div>
+          <div className="rounded-lg overflow-hidden">
+                  <Slide duration={1000}>
+                    <img src="https://i.ibb.co/Bq0cDTm/rsz-1kin-li-sxrsif2dkqy-unsplash.jpg" className="w-full h-96 object-cover" />
+                  </Slide>
+                </div>
+        </div>
+
+        <div>
+            <div className="grid grid-cols-2 md:grid-cols-2 gap-4">
+              {images.map((image) => (
+                <div className="rounded-lg overflow-hidden" key={image.id}>
+                  <Slide duration={1000}>
+                    <img src={image.src} alt={image.alt} className="w-full h-[183.5px] object-cover" />
+                  </Slide>
+                </div>
+              ))}
+            </div>
+        </div>
+
       </div>
     </div>
   );
