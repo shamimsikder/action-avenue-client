@@ -1,11 +1,76 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { FaGoogle } from 'react-icons/fa';
 import useTitle from '../../Hooks/useTitle';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../Providers/AuthProviders';
 
 const SignUp = () => {
 
+    const {createUser, signInWithGoogle, logOut, user} = useContext(AuthContext)
+
+    const navigate = useNavigate()
+    const location = useLocation()
+    const from = location.state?.from?.pathname || '/login'
+
+
     useTitle("Sign Up")
+
+    const handleRegister = (event) => {
+
+        event.preventDefault()
+
+        const form = event.target
+        const name = form.name.value
+        const photo = form.photo.value
+        const email = form.email.value
+        const password = form.password.value
+
+        
+        if(password === "" || email === ""){
+            return
+        }
+        
+        if(password.length < 6){
+            return
+        }
+        createUser(email, password)
+            .then(result => {
+                const loggedUser = result.user
+                console.log(loggedUser)
+                form.reset()
+                
+                logOut()
+                    .then()
+                    .catch(error => {
+                        console.error(error.message)
+                    })
+
+                
+                updateProfile(loggedUser,{
+                    displayName: name,
+                    photoURL: photo,
+                })
+                            
+                navigate(from, { replace: true }); 
+            })
+
+                
+            .catch(error => { 
+                console.error(error.message)
+            })       
+            
+        }
+        
+        const handleGoogleSignIn = () => {
+            signInWithGoogle()
+            .then(result => {
+                const loggedUser = result.user
+                console.log(loggedUser)
+            })
+            .catch(error => { 
+                console.error(error.message)
+            })
+        }
 
     return (
         <div className="flex justify-center items-center mt-20 mb-20">
@@ -16,7 +81,7 @@ const SignUp = () => {
                     <h1 className="text-2xl font-bold text-gray-900">Sign Up</h1>
                 </div>
                 
-                <form className="space-y-4">
+                <form onSubmit={handleRegister} className="space-y-4">
                 
                     <div>
                         <label className="block text-gray-700 font-bold mb-2" htmlFor="name">
@@ -51,7 +116,7 @@ const SignUp = () => {
                     </div>
 
                     <div>
-                        <a className="inline-block align-baseline font-bold text-sm">Already Have an Account? <Link to="/signup" className="text-[#65C3C8] hover:text-[#529EA9]">LogIn</Link></a>
+                        <p className="inline-block align-baseline font-bold text-sm">Already Have an Account? <Link to="/signup" className="text-[#65C3C8] hover:text-[#529EA9]">LogIn</Link></p>
                     </div>
                 
                     <div className="mt-4 text-gray-600 text-center">
@@ -59,7 +124,7 @@ const SignUp = () => {
                     </div>
                     
                     <div className="flex gap-4 flex-col w-full justify-center mt-2">
-                        <button className="bg-white w-full hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+                        <button onClick={handleGoogleSignIn} className="bg-white w-full hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
                             <FaGoogle className="inline mr-2" /> Google
                         </button>
                     </div>

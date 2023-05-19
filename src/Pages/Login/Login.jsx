@@ -1,11 +1,51 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { FaGoogle } from 'react-icons/fa';
 import useTitle from '../../Hooks/useTitle';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../Providers/AuthProviders';
 
 const Login = () => {
 
+    const {user,logInUser, signInWithGoogle} = useContext(AuthContext)
+    const navigate = useNavigate()
+    const location = useLocation()
+    const from = location.state?.from?.pathname || '/'
+
+
     useTitle("Login")
+
+    const handleLogIn = () => {
+
+        const form = event.target
+        const email = form.email.value
+        const password = form.password.value
+
+        logInUser(email, password)
+            .then(result => {
+                const loggedUser = result.user
+                console.log(loggedUser)
+                form.reset()
+                navigate(from, {replace: true})
+            })
+            .catch(error => { 
+                console.error(error.message)
+            })
+        
+    }
+
+    const handleGoogleSignIn = () => {
+
+        signInWithGoogle()
+            .then(result => {
+                const loggedUser = result.user
+                console.log(loggedUser)
+                navigate(from, {replace: true})
+            })
+            .catch(error => { 
+                console.error(error.message)
+            })
+    
+        }
 
     return (
         <div className="flex justify-center items-center mt-20 mb-20">
@@ -16,7 +56,7 @@ const Login = () => {
                     <h1 className="text-2xl font-bold text-gray-900">LogIn</h1>
                 </div>
                 
-                <form className="space-y-4">
+                <form onSubmit={handleLogIn} className="space-y-4">
                 
                     <div>
                         <label className="block text-gray-700 font-bold mb-2" htmlFor="email">
@@ -47,8 +87,8 @@ const Login = () => {
                     </div>
                     
                     <div className="flex gap-4 flex-col w-full justify-center mt-2">
-                        <button className="bg-white w-full hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
-                            <FaGoogle className="inline mr-2" /> Google
+                        <button onClick={handleGoogleSignIn}  className="bg-white w-full hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+                            <FaGoogle className="inline mr-2" />Sign in With Google
                         </button>
                     </div>
 
