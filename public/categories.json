@@ -1,0 +1,190 @@
+[
+      {
+        "name": "Marvel",
+        "subcategories": [
+          {
+            "name": "Avengers",
+            "toys": [
+              {
+                "id": 1,
+                "picture": "https://i.ibb.co/TrR1jKp/rsz-tony-luginsland-g5hbswb-dfc-unsplash.jpg",
+                "name": "Spider-Man",
+                "price": "$19.99",
+                "rating": 4.5
+              },
+              {
+                "id": 2,
+                "picture": "https://i.ibb.co/yY7Srn6/rsz-1gabriel-tovar-otkandgugaa-unsplash.jpg",
+                "name": "Hulk",
+                "price": "$24.99",
+                "rating": 4.2
+              }
+            ]
+          },
+          {
+            "name": "X-men",
+            "toys": [
+              {
+                "id": 3,
+                "picture": "https://i.ibb.co/WHtts67/rsz-1vishwanth-p-yojfsiuifbw-unsplash.jpg",
+                "name": "Deadpool",
+                "price": "$14.99",
+                "rating": 4.8
+              },
+              {
+                "id": 4,
+                "picture": "https://i.ibb.co/1JcBbwV/rsz-x-diamjan221992-c.jpg",
+                "name": "Professor X",
+                "price": "$29.99",
+                "rating": 4.6
+              }
+            ]
+          },
+          {
+            "name": "Guardian of the Galaxy",
+            "toys": [
+              {
+                "id": 5,
+                "picture": "https://i.ibb.co/Z6VrxtR/rsz-gabriel-tovar-thuqumayhey-unsplash.jpg",
+                "name": "Star-Lord",
+                "price": "$14.99",
+                "rating": 4.8
+              },
+              {
+                "id": 6,
+                "picture": "https://i.ibb.co/bWYMCJz/rsz-1groot.jpg",
+                "name": "Groot",
+                "price": "$29.99",
+                "rating": 4.6
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "DC",
+        "subcategories": [
+          {
+            "name": "secret society",
+            "toys": [
+              {
+                "id": 7,
+                "picture": "https://i.ibb.co/mXrvW3v/rsz-joker-action-figures.jpg",
+                "name": "Joker",
+                "price": "$12.99",
+                "rating": 4.4
+              },
+              {
+                "id": 8,
+                "picture": "https://i.ibb.co/SJBDhZ9/black-adam.jpg",
+                "name": "Black Adam",
+                "price": "$17.99",
+                "rating": 4.7
+              }
+            ]
+          },
+          {
+            "name": "Justice League",
+            "toys": [
+              {
+                "id": 9,
+                "picture": "https://i.ibb.co/FhqTcVq/rsz-1andrew-reshetov-xzeqlpqsldi-unsplash.jpg",
+                "name": "Batman",
+                "price": "$22.99",
+                "rating": 4.3
+              },
+              {
+                "id": 10,
+                "picture": "https://i.ibb.co/m5Vq4CY/jl.jpg",
+                "name": "Justice League",
+                "price": "$27.99",
+                "rating": 4.9
+              }
+            ]
+          },
+          {
+            "name": "Suicide Squad",
+            "toys": [
+              {
+                "id": 11,
+                "picture": "https://i.ibb.co/ZVCCyZZ/rsz-ss2.jpg",
+                "name": "Toy 7",
+                "price": "$22.99",
+                "rating": 4.3
+              },
+              {
+                "id": 12,
+                "picture": "https://i.ibb.co/cCMx9QS/rsz-1ss.jpg",
+                "name": "Suicide Squad",
+                "price": "$27.99",
+                "rating": 4.9
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Anime",
+        "subcategories": [
+          {
+            "name": "Dragon Ball Z",
+            "toys": [
+              {
+                "id": 13,
+                "picture": "https://i.ibb.co/vYHDXjn/rsz-1jeet-dhanoa-sr1badlrskm-unsplash.jpg",
+                "name": "Goku-1",
+                "price": "$32.99",
+                "rating": 4.1
+              },
+              {
+                "id": 14,
+                "picture": "https://i.ibb.co/ZJkj34d/rsz-1sysoda-chau-smen1eul9de-unsplash.jpg",
+                "name": "Goku-2",
+                "price": "$39.99",
+                "rating": 4.7
+              }
+            ]
+          },
+          {
+            "name": "One Piece",
+            "toys": [
+              {
+                "id": 15,
+                "picture": "https://i.ibb.co/fp835VY/rsz-1jay-nu-uoifiwek-unsplash.jpg",
+                "name": "Luffy",
+                "price": "$36.99",
+                "rating": 4.6
+              },
+              {
+                "id": 16,
+                "picture": "https://i.ibb.co/DgkBCBK/rsz-john-carlo-tubelleza-9fw3v71tq9q-unsplash.jpg",
+                "name": "One piece Collections",
+                "price": "$42.99",
+                "rating": 4.3
+              }
+            ]
+          },
+          {
+            "name": "Jujutsu Kaisen",
+            "toys": [
+              {
+                "id": 17,
+                "picture": "https://i.ibb.co/N7Knzm8/itadori-yuji.jpg",
+                "name": "Itadori Yuji",
+                "price": "$36.99",
+                "rating": 4.6
+              },
+              {
+                "id": 18,
+                "picture": "https://i.ibb.co/bX0TZCG/rsz-1gojo-satoru.jpg",
+                "name": "Gojo Satoru",
+                "price": "$42.99",
+                "rating": 4.3
+              }
+            ]
+          }
+        ]
+      }
+]
+  
+  

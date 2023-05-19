@@ -2,6 +2,7 @@ import React from 'react';
 import useTitle from '../../Hooks/useTitle';
 import Banner from './Banner';
 import ImageGallery from './ImageGallery';
+import ShopByCategory from './ShopByCategory/ShopByCategory';
 
 const Home = () => {
 
@@ -11,6 +12,7 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <ImageGallery></ImageGallery>
+            <ShopByCategory></ShopByCategory>
         </div>
     );
 };
