@@ -18,7 +18,7 @@ const ShopByCategory = () => {
   return (
     <div className="w-full max-w-7xl mx-auto py-8">
 
-        <div data-aos="fade-up" className='mb-10 text-center'>
+        <div data-aos="fade-right" className='mb-10 text-center'>
             <p className='text-5xl font-semibold'>Shop by Categories</p>
         </div>
 
