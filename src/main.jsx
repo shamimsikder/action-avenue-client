@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import 'aos/dist/aos.css';
 import AOS from 'aos';
 AOS.init();
+import 'react-toastify/dist/ReactToastify.css';
 import {
   RouterProvider,
 } from "react-router-dom";

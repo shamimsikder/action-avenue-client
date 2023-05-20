@@ -1,13 +1,14 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { FaGoogle } from 'react-icons/fa';
 import useTitle from '../../Hooks/useTitle';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Providers/AuthProviders';
 import { updateProfile } from 'firebase/auth';
+import { ToastContainer, toast } from 'react-toastify';
 
 const SignUp = () => {
 
-    const {createUser, signInWithGoogle, logOut, user} = useContext(AuthContext)
+    const {createUser, signInWithGoogle, logOut} = useContext(AuthContext)
 
     const navigate = useNavigate()
     const location = useLocation()
@@ -27,13 +28,35 @@ const SignUp = () => {
         const password = form.password.value
 
         
-        if(password === "" || email === ""){
-            return
+        if (password === "" || email === "") {
+           
+            toast.error("The email or password field is empty", {
+                position: "top-center",
+                autoClose: 1500,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                });
+            return;
         }
+        if (password.length < 6) {
+          
+          toast.error("Password will be  minimum 6 character", {
+            position: "top-center",
+            autoClose: 1500,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            });
+          return
+        } 
         
-        if(password.length < 6){
-            return
-        }
         createUser(email, password)
             .then(result => {
                 const loggedUser = result.user
@@ -117,7 +140,7 @@ const SignUp = () => {
                     </div>
 
                     <div>
-                        <p className="inline-block align-baseline font-bold text-sm">Already Have an Account? <Link to="/signup" className="text-[#65C3C8] hover:text-[#529EA9]">LogIn</Link></p>
+                        <p className="inline-block align-baseline font-bold text-sm">Already Have an Account? <Link to="/login" className="text-[#65C3C8] hover:text-[#529EA9]">LogIn</Link></p>
                     </div>
                 
                     <div className="mt-4 text-gray-600 text-center">
@@ -133,6 +156,18 @@ const SignUp = () => {
                 </form>
 
             </div>
+            <ToastContainer
+                position="top-center"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="light"
+            />
         </div>
 
     );
