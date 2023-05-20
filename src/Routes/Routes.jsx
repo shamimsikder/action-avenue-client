@@ -47,9 +47,9 @@ import ViewDetails from "../Pages/ViewDetails/ViewDetails";
           element: <AddAToy></AddAToy>
         },
         {
-          path: "view-details/:id",
+          path: "/view-details/:id",
           element: <ViewDetails></ViewDetails>,
-          loader: ({params}) => fetch(`categories.json/${params.id}`)
+          loader: ({params}) => fetch()
         },
 
       ]

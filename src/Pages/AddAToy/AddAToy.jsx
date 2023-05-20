@@ -4,8 +4,7 @@ import { useForm } from 'react-hook-form';
 import Select from 'react-select';
 import { motion } from 'framer-motion';
 import { BsPlusCircle } from 'react-icons/bs';
-
-
+import Swal from 'sweetalert2';
 
 const AddAToy = () => {
 
@@ -13,29 +12,42 @@ const AddAToy = () => {
 
     const { register, handleSubmit } = useForm();
 
-  const subcategories = [
-    { value: 'avengers', label: 'Avengers' },
-    { value: 'x_men', label: 'X-men' },
-    { value: 'gotg', label: 'Guardian of the Galaxy' },
-    { value: 'secret_society', label: 'Secret Society' },
-    { value: 'justice_league', label: 'Justice League' },
-    { value: 'suicide_squad', label: 'Suicide Squad' },
-    { value: 'dragon_ball', label: 'Dragon Ball Z' },
-    { value: 'one_piece', label: 'One Piece' },
-    { value: 'jjk', label: 'Jujutsu Kaisen' }
+    const subcategories = [
+        { value: 'avengers', label: 'Avengers' },
+        { value: 'x_men', label: 'X-men' },
+        { value: 'gotg', label: 'Guardian of the Galaxy' },
+        { value: 'secret_society', label: 'Secret Society' },
+        { value: 'justice_league', label: 'Justice League' },
+        { value: 'suicide_squad', label: 'Suicide Squad' },
+        { value: 'dragon_ball', label: 'Dragon Ball Z' },
+        { value: 'one_piece', label: 'One Piece' },
+        { value: 'jjk', label: 'Jujutsu Kaisen' }
 
-  ];
+    ];
 
-  const formVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: { opacity: 1, scale: 1 },
-  };
+    const formVariants = {
+        hidden: { opacity: 0, scale: 0.8 },
+        visible: { opacity: 1, scale: 1 },
+    };
 
-  const onSubmit = (data) => {
+    const onSubmit = (data) => {
+        fetch("http://localhost:5000/all-toys", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data),
+            })
+            .then((res) => res.json())
+            .then((result) => {
+                Swal.fire(
+                    'Good job!',
+                    'You clicked the button!',
+                    'success'
+                )
+                console.log(result);
+            });
+        console.log(data);
 
-    console.log(data);
-
-};
+    };
 
     return (
         <div  className="w-full max-w-7xl mx-auto mt-10 mb-20">
