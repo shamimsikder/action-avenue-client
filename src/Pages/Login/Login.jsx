@@ -3,10 +3,11 @@ import { FaGoogle } from 'react-icons/fa';
 import useTitle from '../../Hooks/useTitle';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Providers/AuthProviders';
+import { ToastContainer, toast } from 'react-toastify';
 
 const Login = () => {
 
-    const {user,logInUser, signInWithGoogle} = useContext(AuthContext)
+    const {logInUser, signInWithGoogle} = useContext(AuthContext)
     const navigate = useNavigate()
     const location = useLocation()
     const from = location.state?.from?.pathname || '/'
@@ -31,6 +32,16 @@ const Login = () => {
             })
             .catch(error => { 
                 console.error(error.message)
+                toast.error(error.message, {
+                    position: 'top-center',
+                    autoClose: 1500,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: 'light',
+                });
             })
         
     }
@@ -97,6 +108,20 @@ const Login = () => {
                 </form>
 
             </div>
+
+            <ToastContainer
+                position="top-center"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="light"
+            />
+
         </div>
     );
 };

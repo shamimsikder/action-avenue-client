@@ -44,15 +44,15 @@ const SignUp = () => {
         }
         if (password.length < 6) {
           
-          toast.error("Password will be  minimum 6 character", {
-            position: "top-center",
-            autoClose: 1500,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "light",
+            toast.error("Password will be  minimum 6 character", {
+                position: "top-center",
+                autoClose: 1500,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
             });
           return
         } 
