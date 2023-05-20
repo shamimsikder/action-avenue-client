@@ -37,7 +37,7 @@ import ViewDetails from "../Pages/ViewDetails/ViewDetails";
         {
           path: "all-toys",
           element: <AllToys></AllToys>,
-          loader: () => fetch('http://localhost:5000/all-toys')
+          loader: () => fetch('https://action-avenue-server.vercel.app/all-toys')
         },
         {
           path: "my-toys",
@@ -50,7 +50,7 @@ import ViewDetails from "../Pages/ViewDetails/ViewDetails";
         {
           path: "/view-details/:id",
           element: <ViewDetails></ViewDetails>,
-          loader: ({params}) => fetch(`http://localhost:5000/toy/${params.id}`)
+          loader: ({params}) => fetch(`https://action-avenue-server.vercel.app/toy/${params.id}`)
         },
 
       ]

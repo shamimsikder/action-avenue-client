@@ -16,7 +16,7 @@ const MyToys = () => {
     useTitle("Mt Toys")
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myToys/animeemporium@example.com`)
+        fetch(`https://action-avenue-server.vercel.app/myToys/animeemporium@example.com`)
           .then((res) => res.json())
           .then((data) => {
             console.log(data);
@@ -26,7 +26,7 @@ const MyToys = () => {
     
     const handleDeleteToy = (toyId) => {
         
-          fetch(`http://localhost:5000/myToys/${toyId}`, {
+          fetch(`https://action-avenue-server.vercel.app/myToys/${toyId}`, {
             method: 'DELETE',
           })
             .then((response) => response.json())

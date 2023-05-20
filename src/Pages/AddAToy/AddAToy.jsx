@@ -37,7 +37,7 @@ const AddAToy = () => {
 
     const onSubmit = (data) => {
 
-        fetch("http://localhost:5000/all-toys", {
+        fetch("https://action-avenue-server.vercel.app/all-toys", {
                 method: "POST",
                 headers: { "content-type": "application/json" },
                 body: JSON.stringify(data),
