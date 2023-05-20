@@ -1,17 +1,19 @@
 import React, { useContext, useEffect, useState } from 'react';
 import useTitle from '../../Hooks/useTitle';
 import { AuthContext } from '../../Providers/AuthProviders';
-import { Link} from 'react-router-dom';
-import { motion } from 'framer-motion';
 import { FaEdit, FaTrash } from 'react-icons/fa';
 import { FiEye } from 'react-icons/fi';
 import { ToastContainer, toast } from 'react-toastify';
+import { useForm } from 'react-hook-form';
+
 
 
 const MyToys = () => {
 
     const {user} = useContext(AuthContext)
     const [toys, setToys] = useState([]);
+    const [selectedToy, setSelectedToy] = useState(null);
+    const { register, handleSubmit } = useForm();
 
     useTitle("My Toys")
 
@@ -48,10 +50,46 @@ const MyToys = () => {
         
     };
 
-    const rowVariants = {
-        hidden: { opacity: 0, y: 10 },
-        visible: { opacity: 1, y: 0 },
-    };
+    const handleUpdateToy = async (data) => {
+        try {
+          const response = await fetch(`https://action-avenue-server.vercel.app/myToys/${selectedToy._id}`, {
+            method: "PATCH",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data),
+          });
+      
+          if (!response.ok) {
+            throw new Error("Failed to update toy data.");
+          }
+      
+          const result = await response.json();
+      
+          console.log(result);
+          if (result.modifiedCount > 0) {
+            const updatedDataResponse = await fetch(`https://action-avenue-server.vercel.app/myToys/${user?.email}`);
+            const updatedData = await updatedDataResponse.json();
+            setToys(updatedData);
+      
+            toast.success("Toy Data Updated Successfully", {
+              position: "top-center",
+              autoClose: 1500,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "light",
+            });
+      
+            setSelectedToy(null);
+          }
+        } catch (error) {
+          console.error(error);
+          // Handle the error condition appropriately (e.g., show an error message)
+        }
+      };
+      
+      
 
 
     return (
@@ -59,10 +97,8 @@ const MyToys = () => {
             <h1 className="text-3xl font-semibold mb-6 text-center">All Toys</h1>
 
             <div className="overflow-x-auto">
-                <motion.table
+                <table
                     className="min-w-full bg-white border rounded-lg border-gray-300"
-                    initial="hidden"
-                    animate="visible"
                 >
                     <thead>
                         <tr>
@@ -76,9 +112,9 @@ const MyToys = () => {
                     </thead>
                     <tbody>
                         {toys.map((toy) => (
-                            <motion.tr
+                            <tr
                                 key={toy._id}
-                                variants={rowVariants}
+                               
                                 className="text-center"
                             >
                                 <td className="py-2 px-4 border-b">{toy.name}</td>
@@ -106,15 +142,71 @@ const MyToys = () => {
                                 </td>
                                 <td className="py-2 px-4 border-b">
                                     <span className='flex items-center justify-center gap-2'>
-                                        <FaEdit className="text-[#65C3C8] cursor-pointer" />
+                                        <FaEdit className="text-[#65C3C8] cursor-pointer" onClick={() => setSelectedToy(toy)}/>
                                         <FaTrash className='text-[#65C3C8] cursor-pointer' onClick={() => handleDeleteToy(toy._id)}/>
                                     </span>
                                 </td>
-                            </motion.tr>
+                            </tr>
                         ))}
                     </tbody>
-                </motion.table>
+                </table>
             </div>
+
+            {selectedToy && (
+                <div className="fixed inset-0 flex items-center justify-center z-50">
+                    <div className="modal modal-open">
+                        <div className="modal-box w-96 mx-auto">
+                    <   h2 className="text-xl font-semibold mb-4">Update Toy</h2>
+                        <form onSubmit={handleSubmit(handleUpdateToy)}>
+                            <div className="mb-4">
+                            <label className="block text-gray-700 text-sm font-bold mb-2">
+                                Price
+                            </label>
+                            <input
+                                className="input input-bordered rounded-md w-full"
+                                type="text"
+                                defaultValue={selectedToy.price}
+                                {...register('price')}
+                            />
+                        </div>
+                        <div className="mb-4">
+                            <label className="block text-gray-700 text-sm font-bold mb-2">
+                                Available Quantity
+                            </label>
+                            <input
+                                className="input input-bordered rounded-md w-full"
+                                type="text"
+                                defaultValue={selectedToy.quantity}
+                                {...register('quantity')}
+                            />
+                        </div>
+                        <div className="mb-4">
+                            <label className="block text-gray-700 text-sm font-bold mb-2">
+                                Detail Description
+                            </label>
+                            <textarea
+                                className="textarea textarea-bordered rounded-md w-full"
+                                defaultValue={selectedToy.description}
+                                {...register('description')}
+                            />
+                        </div>
+                            <div className="flex justify-end">
+                            <button
+                                type="button"
+                                className="btn btn-primary rounded-md text-white mr-2"
+                                onClick={() => setSelectedToy(null)}
+                            >
+                                Cancel
+                            </button>
+                            <button type="submit" className="btn btn-primary rounded-md text-white">
+                                Update Toy
+                            </button>
+                        </div>
+                    </form>
+                    </div>
+                </div>
+                </div>
+            )}
 
             <ToastContainer
                 position="top-center"
