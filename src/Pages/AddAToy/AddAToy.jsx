@@ -4,13 +4,15 @@ import { useForm } from 'react-hook-form';
 import Select from 'react-select';
 import { motion } from 'framer-motion';
 import { BsPlusCircle } from 'react-icons/bs';
-import Swal from 'sweetalert2';
+import Swal from 'sweetalert2/dist/sweetalert2.js';
+import 'sweetalert2/dist/sweetalert2.css';
+
 
 const AddAToy = () => {
 
     useTitle('Add A Toy')
 
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit, setValue } = useForm();
 
     const subcategories = [
         { value: 'avengers', label: 'Avengers' },
@@ -41,7 +43,7 @@ const AddAToy = () => {
             .then((result) => {
                 Swal.fire(
                     'Good job!',
-                    'You clicked the button!',
+                    'Your Stored in Database!',
                     'success'
                 )
                 console.log(result);
@@ -49,6 +51,12 @@ const AddAToy = () => {
         console.log(data);
 
     };
+
+    const handleSelectChange = (selectedOption) => {
+        const subcategoryValue = selectedOption ? selectedOption.label : '';
+        setValue('subcategory', subcategoryValue);
+    };
+      
 
     return (
         <div  className="w-full max-w-7xl mx-auto mt-10 mb-20">
@@ -117,6 +125,7 @@ const AddAToy = () => {
                             {...register('subcategory')}
                             options={subcategories}
                             classNamePrefix="select"
+                            onChange={handleSelectChange}
                         />
                     </div>
                     <div className='grid grid-cols-2  gap-2'>
