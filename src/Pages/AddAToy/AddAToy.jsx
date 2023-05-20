@@ -91,13 +91,12 @@ const AddAToy = () => {
                         </div>
 
                         <div className="form-group">
-                            <label htmlFor="name" className="text-[#65C3C8] mb-2">Name</label>
+                            <label htmlFor="name" className="text-[#65C3C8] mb-2">Toy Name</label>
                             <input
                                 type="text"
                                 id="name"
                                 className="form-control outline-none border-[1px] w-full border-[#65C3C8] px-3 py-2 rounded-md mb-2 focus:ring-[#65C3C8] focus:border-[#65C3C8] transition-colors duration-300"
                                 placeholder="Enter Your"
-                                value={user?.displayName}
                                 {...register('name')}
                             />
                         </div>
@@ -108,6 +107,7 @@ const AddAToy = () => {
                                 id="sellerName"
                                 className="form-control outline-none border-[1px] w-full border-[#65C3C8] px-3 py-2 rounded-md mb-2 focus:ring-[#65C3C8] focus:border-[#65C3C8] transition-colors duration-300"
                                 placeholder="Enter Your"
+                                value={user?.displayName}
                                 {...register('sellerName')}
                             />
                         </div>
