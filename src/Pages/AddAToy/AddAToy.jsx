@@ -97,7 +97,7 @@ const AddAToy = () => {
                                 id="name"
                                 className="form-control outline-none border-[1px] w-full border-[#65C3C8] px-3 py-2 rounded-md mb-2 focus:ring-[#65C3C8] focus:border-[#65C3C8] transition-colors duration-300"
                                 placeholder="Enter Your"
-                                value={user.displayName}
+                                value={user?.displayName}
                                 {...register('name')}
                             />
                         </div>
@@ -118,7 +118,7 @@ const AddAToy = () => {
                                 id="sellerEmail"
                                 className="form-control outline-none border-[1px] w-full border-[#65C3C8] px-3 py-2 rounded-md mb-2 focus:ring-[#65C3C8] focus:border-[#65C3C8] transition-colors duration-300"
                                 placeholder="Enter Your"
-                                value={user.email}
+                                value={user?.email}
                                 {...register('sellerEmail')}
                             />
                         </div>
