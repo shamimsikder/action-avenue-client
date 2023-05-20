@@ -23,7 +23,7 @@ const TrendingThisMonth = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {trending.map((item, index) => (
-                <div key={item.id} className="relative flex flex-col items-center w-full md:w-96 rounded-lg overflow-hidden" data-aos="fade-right">
+                <div key={item._id} className="relative flex flex-col items-center w-full md:w-96 rounded-lg overflow-hidden" data-aos="fade-right">
                     <div className="relative" onMouseEnter={() => setHoveredIndex(index)} onMouseLeave={() => setHoveredIndex(null)}>
                         <img src={item.picture} alt={item.name} className="w-96 h-96 rounded-md object-cover"/>
                         {hoveredIndex === index && (

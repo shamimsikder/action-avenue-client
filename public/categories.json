@@ -6,7 +6,7 @@
             "name": "Avengers",
             "toys": [
               {
-                "id": 1,
+                "_id": 1,
                 "picture": "https://i.ibb.co/TrR1jKp/rsz-tony-luginsland-g5hbswb-dfc-unsplash.jpg",
                 "name": "Spider-Man",
                 "price": "$19.99",
@@ -18,7 +18,7 @@
   
               },
               {
-                "id": 2,
+                "_id": 2,
                 "picture": "https://i.ibb.co/yY7Srn6/rsz-1gabriel-tovar-otkandgugaa-unsplash.jpg",
                 "name": "Hulk",
                 "price": "$24.99",
@@ -29,7 +29,7 @@
                 "description": "Bring home the friendly neighborhood superhero with this highly detailed Spider-Man action figure. Made with premium quality materials and featuring articulation for various poses. Perfect for Marvel fans and collectors."
               },
               {
-                "id": 3,
+                "_id": 3,
                 "picture": "https://i.ibb.co/TrR1jKp/rsz-tony-luginsland-g5hbswb-dfc-unsplash.jpg",
                 "name": "Spider-Man",
                 "price": "$19.99",
@@ -46,7 +46,7 @@
             "name": "X-men",
             "toys": [
               {
-                "id": 4,
+                "_id": 4,
                 "picture": "https://i.ibb.co/WHtts67/rsz-1vishwanth-p-yojfsiuifbw-unsplash.jpg",
                 "name": "Deadpool",
                 "price": "$14.99",
@@ -58,7 +58,7 @@
 
               },
               {
-                "id": 5,
+                "_id": 5,
                 "picture": "https://i.ibb.co/1JcBbwV/rsz-x-diamjan221992-c.jpg",
                 "name": "Professor X",
                 "price": "$29.99",
@@ -70,7 +70,7 @@
 
               },
               {
-                "id": 6,
+                "_id": 6,
                 "picture": "https://i.ibb.co/WHtts67/rsz-1vishwanth-p-yojfsiuifbw-unsplash.jpg",
                 "name": "Deadpool",
                 "price": "$14.99",
@@ -87,7 +87,7 @@
             "name": "Guardian of the Galaxy",
             "toys": [
               {
-                "id": 7,
+                "_id": 7,
                 "picture": "https://i.ibb.co/Z6VrxtR/rsz-gabriel-tovar-thuqumayhey-unsplash.jpg",
                 "name": "Star-Lord",
                 "price": "$14.99",
@@ -99,7 +99,7 @@
       
               },
               {
-                "id": 8,
+                "_id": 8,
                 "picture": "https://i.ibb.co/bWYMCJz/rsz-1groot.jpg",
                 "name": "Groot",
                 "price": "$29.99",
@@ -111,7 +111,7 @@
 
               },
               {
-                "id": 9,
+                "_id": 9,
                 "picture": "https://i.ibb.co/Z6VrxtR/rsz-gabriel-tovar-thuqumayhey-unsplash.jpg",
                 "name": "Star-Lord",
                 "price": "$14.99",
@@ -133,7 +133,7 @@
             "name": "Secret Society",
             "toys": [
               {
-                "id": 10,
+                "_id": 10,
                 "picture": "https://i.ibb.co/mXrvW3v/rsz-joker-action-figures.jpg",
                 "name": "Joker",
                 "price": "$12.99",
@@ -145,7 +145,7 @@
       
               },
               {
-                "id": 11,
+                "_id": 11,
                 "picture": "https://i.ibb.co/SJBDhZ9/black-adam.jpg",
                 "name": "Black Adam",
                 "price": "$17.99",
@@ -153,11 +153,11 @@
                 "sellerName": "Kahndaq Emporium",
                 "sellerEmail": "kahndaqemporium@example.com",
                 "quantity": 8,
-                "description": "Harness the immense power of Black Adam with this action figure. Featuring his distinctive lightning-shaped chest emblem and empowered by ancient magic, Black Adam is a formidable adversary."
+                "description": "Harness the immense power of Black Adam with this action figure. Featuring his distinctive lightning-shaped chest emblem and empowered by ancient magic, Black Adam is a form_idable adversary."
       
               },
               {
-                "id": 12,
+                "_id": 12,
                 "picture": "https://i.ibb.co/SJBDhZ9/black-adam.jpg",
                 "name": "Black Adam",
                 "price": "$17.99",
@@ -165,7 +165,7 @@
                 "sellerName": "Kahndaq Emporium",
                 "sellerEmail": "kahndaqemporium@example.com",
                 "quantity": 8,
-                "description": "Harness the immense power of Black Adam with this action figure. Featuring his distinctive lightning-shaped chest emblem and empowered by ancient magic, Black Adam is a formidable adversary."
+                "description": "Harness the immense power of Black Adam with this action figure. Featuring his distinctive lightning-shaped chest emblem and empowered by ancient magic, Black Adam is a form_idable adversary."
 
               }
             ]
@@ -174,7 +174,7 @@
             "name": "Justice League",
             "toys": [
               {
-                "id": 13,
+                "_id": 13,
                 "picture": "https://i.ibb.co/FhqTcVq/rsz-1andrew-reshetov-xzeqlpqsldi-unsplash.jpg",
                 "name": "Batman",
                 "price": "$22.99",
@@ -186,7 +186,7 @@
       
               },
               {
-                "id": 14,
+                "_id": 14,
                 "picture": "https://i.ibb.co/m5Vq4CY/jl.jpg",
                 "name": "Justice League",
                 "price": "$27.99",
@@ -198,7 +198,7 @@
       
               },
               {
-                "id": 15,
+                "_id": 15,
                 "picture": "https://i.ibb.co/FhqTcVq/rsz-1andrew-reshetov-xzeqlpqsldi-unsplash.jpg",
                 "name": "Batman",
                 "price": "$22.99",
@@ -215,7 +215,7 @@
             "name": "Suicide Squad",
             "toys": [
               {
-                "id": 16,
+                "_id": 16,
                 "picture": "https://i.ibb.co/ZVCCyZZ/rsz-ss2.jpg",
                 "name": "Peacemaker",
                 "price": "$22.99",
@@ -227,7 +227,7 @@
       
               },
               {
-                "id": 17,
+                "_id": 17,
                 "picture": "https://i.ibb.co/cCMx9QS/rsz-1ss.jpg",
                 "name": "Suicide Squad",
                 "price": "$27.99",
@@ -239,7 +239,7 @@
       
               },
               {
-                "id": 18,
+                "_id": 18,
                 "picture": "https://i.ibb.co/ZVCCyZZ/rsz-ss2.jpg",
                 "name": "Peacemaker",
                 "price": "$22.99",
@@ -261,7 +261,7 @@
             "name": "Dragon Ball Z",
             "toys": [
               {
-                "id": 19,
+                "_id": 19,
                 "picture": "https://i.ibb.co/vYHDXjn/rsz-1jeet-dhanoa-sr1badlrskm-unsplash.jpg",
                 "name": "Goku-1",
                 "price": "$32.99",
@@ -273,7 +273,7 @@
       
               },
               {
-                "id": 20,
+                "_id": 20,
                 "picture": "https://i.ibb.co/ZJkj34d/rsz-1sysoda-chau-smen1eul9de-unsplash.jpg",
                 "name": "Goku-2",
                 "price": "$39.99",
@@ -285,7 +285,7 @@
       
               },
               {
-                "id": 21,
+                "_id": 21,
                 "picture": "https://i.ibb.co/vYHDXjn/rsz-1jeet-dhanoa-sr1badlrskm-unsplash.jpg",
                 "name": "Goku-1",
                 "price": "$32.99",
@@ -302,7 +302,7 @@
             "name": "One Piece",
             "toys": [
               {
-                "id": 22,
+                "_id": 22,
                 "picture": "https://i.ibb.co/fp835VY/rsz-1jay-nu-uoifiwek-unsplash.jpg",
                 "name": "Luffy",
                 "price": "$36.99",
@@ -314,7 +314,7 @@
       
               },
               {
-                "id": 23,
+                "_id": 23,
                 "picture": "https://i.ibb.co/DgkBCBK/rsz-john-carlo-tubelleza-9fw3v71tq9q-unsplash.jpg",
                 "name": "One piece Collections",
                 "price": "$42.99",
@@ -326,7 +326,7 @@
       
               },
               {
-                "id": 24,
+                "_id": 24,
                 "picture": "https://i.ibb.co/fp835VY/rsz-1jay-nu-uoifiwek-unsplash.jpg",
                 "name": "Luffy",
                 "price": "$36.99",
@@ -343,7 +343,7 @@
             "name": "Jujutsu Kaisen",
             "toys": [
               {
-                "id": 25,
+                "_id": 25,
                 "picture": "https://i.ibb.co/N7Knzm8/itadori-yuji.jpg",
                 "name": "Itadori Yuji",
                 "price": "$36.99",
@@ -351,11 +351,11 @@
                 "sellerName": "Tokyo Jujutsu Store",
                 "sellerEmail": "tokyojujutsustore@example.com",
                 "quantity": 6,
-                "description": "Summon the power of Itadori Yuji with this action figure from Jujutsu Kaisen. Itadori's incredible strength and cursed energy make him a formidable fighter against supernatural threats."
+                "description": "Summon the power of Itadori Yuji with this action figure from Jujutsu Kaisen. Itadori's incredible strength and cursed energy make him a form_idable fighter against supernatural threats."
       
               },
               {
-                "id": 26,
+                "_id": 26,
                 "picture": "https://i.ibb.co/bX0TZCG/rsz-1gojo-satoru.jpg",
                 "name": "Gojo Satoru",
                 "price": "$42.99",
@@ -363,11 +363,11 @@
                 "sellerName": "Tokyo Jujutsu Store",
                 "sellerEmail": "tokyojujutsustore@example.com",
                 "quantity": 6,
-                "description": "Summon the power of Itadori Yuji with this action figure from Jujutsu Kaisen. Itadori's incredible strength and cursed energy make him a formidable fighter against supernatural threats."
+                "description": "Summon the power of Itadori Yuji with this action figure from Jujutsu Kaisen. Itadori's incredible strength and cursed energy make him a form_idable fighter against supernatural threats."
       
               },
               {
-                "id": 27,
+                "_id": 27,
                 "picture": "https://i.ibb.co/N7Knzm8/itadori-yuji.jpg",
                 "name": "Itadori Yuji",
                 "price": "$36.99",

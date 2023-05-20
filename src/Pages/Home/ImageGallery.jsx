@@ -34,7 +34,7 @@ const ImageGallery = () => {
         <div>
             <div className="grid grid-cols-2 md:grid-cols-2 gap-4">
               {images.map((image) => (
-                <div className="rounded-lg overflow-hidden" key={image.id}>
+                <div className="rounded-lg overflow-hidden" key={image._id}>
                   <Slide duration={1000}>
                     <img src={image.src} alt={image.alt} className="w-full h-[183.5px] object-cover" />
                   </Slide>

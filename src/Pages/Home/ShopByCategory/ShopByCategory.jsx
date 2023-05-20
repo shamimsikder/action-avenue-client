@@ -4,6 +4,7 @@ import 'react-tabs/style/react-tabs.css';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Link } from 'react-router-dom';
 
 const ShopByCategory = () => {
   const [categories, setCategories] = useState([]);
@@ -36,28 +37,20 @@ const ShopByCategory = () => {
                             <h2 className="text-xl font-bold mb-4">{subcategory.name}</h2>
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                                 {subcategory.toys.map((toy) => (
-                                    <div data-aos="fade-right" key={toy.id} className="bg-white w-full md:w-96 rounded-md shadow-md p-4 flex flex-col items-center">
+                                    <div data-aos="fade-right" key={toy._id} className="bg-white w-full md:w-96 rounded-md shadow-md p-4 flex flex-col items-center">
                                         <img src={toy.picture} alt={toy.name} className="w-96 h-96 rounded-md object-cover mb-4"/>
                                         <h3 className="text-lg font-bold mb-2">{toy.name}</h3>
                                         <p className="text-gray-600 mb-2">{toy.price}</p>
                                         <p className="text-gray-600 mb-2">Rating: {toy.rating}</p>
-                                        <label className="bg-[#65C3C8] hover:bg-[#529EA9] w-full text-white px-4 py-2 rounded-md text-center cursor-pointer"  htmlFor={`my-modal-${toy.id}`} data-aos="fade-right" data-aos-duration="500">
-                                            View Details
-                                        </label>
-                                        <input type="checkbox" id={`my-modal-${toy.id}`} className="modal-toggle" />
-                                        <div className="modal">
-                                        <div className="modal-box relative flex flex-col">
-                                            <label htmlFor={`my-modal-${toy.id}`} className="btn btn-primary text-white btn-sm btn-circle absolute right-2 top-2">✕</label>
-                                            <img src={toy.picture} alt={toy.name} className="w-96 h-96 rounded-md mx-auto object-cover mb-4"/>
-                                            <h3 className="text-md "><span className='text-lg font-semibold'>Toy Name</span>: {toy.name}</h3>
-                                            <h3 className="text-lg"><span className='text-lg font-semibold'>Seller Name</span>: {toy.sellerName}</h3>
-                                            <h3 className="text-lg"><span className='text-lg font-semibold'>Seller Email</span>: {toy.sellerEmail}</h3>
-                                            <h3 className="text-lg"><span className='text-lg font-semibold'>Price</span>: {toy.price}</h3>
-                                            <h3 className="text-lg"><span className='text-lg font-semibold'>Quantity</span>: {toy.quantity}</h3>
-                                            <h3 className="text-lg"><span className='text-lg font-semibold'>Rating</span>: {toy.rating}</h3>
-                                            <p className="py-4">{toy.description}</p>
-                                        </div>
-                                        </div>
+                                        
+                                        <Link to={`/view-details/${toy._id}`}>
+                                            
+                                            <button className="bg-[#65C3C8] hover:bg-[#529EA9] w-full text-white px-4 py-2 rounded-md text-center cursor-pointer" data-aos="fade-right" data-aos-duration="500">
+                                                View Details
+                                            </button>
+                                        
+                                        </Link>
+                                        
                                     </div>
                                 ))}
                             </div>

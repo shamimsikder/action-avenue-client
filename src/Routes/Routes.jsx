@@ -10,6 +10,7 @@ import MyToys from "../Pages/MyToys/MyToys";
 import AddAToy from "../Pages/AddAToy/AddAToy";
 import SignUp from "../Pages/SignUp/SignUp";
 import Error from "../Pages/Error/Error";
+import ViewDetails from "../Pages/ViewDetails/ViewDetails";
   
   const router = createBrowserRouter([
     {
@@ -44,6 +45,11 @@ import Error from "../Pages/Error/Error";
         {
           path: "add-toys",
           element: <AddAToy></AddAToy>
+        },
+        {
+          path: "view-details/:id",
+          element: <ViewDetails></ViewDetails>,
+          loader: ({params}) => fetch(`categories.json/${params.id}`)
         },
 
       ]
