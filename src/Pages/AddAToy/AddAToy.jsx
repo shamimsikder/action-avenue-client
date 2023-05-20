@@ -31,9 +31,10 @@ const AddAToy = () => {
     };
 
     const onSubmit = (data) => {
+
         fetch("http://localhost:5000/all-toys", {
                 method: "POST",
-                headers: { "Content-Type": "application/json" },
+                headers: { "content-type": "application/json" },
                 body: JSON.stringify(data),
             })
             .then((res) => res.json())

@@ -6,7 +6,7 @@ const MyToys = () => {
     useTitle("Mt Toys")
 
     return (
-        <div>
+        <div className='w-full max-w-7xl mx-auto py-8'>
             <h1>My Toys</h1>
         </div>
     );
