@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { AuthContext } from '../../Providers/AuthProviders';
 
 const Footer = () => {
+    const {user} = useContext(AuthContext)
     return (
         <footer className="footer footer-center p-10 bg-primary text-primary-content">
         
@@ -10,8 +12,10 @@ const Footer = () => {
                 <div className='grid grid-flow-col gap-4 text-md md:text-lg'>
                     <NavLink exact to="/">Home</NavLink>
                     <NavLink to="/all-toys">All Toys</NavLink>
-                    <NavLink to="/my-toys">My Toys</NavLink>
-                    <NavLink to="/add-toys">Add A Toy</NavLink>
+                    {user && <>
+                        <NavLink to="/my-toys">My Toys</NavLink>
+                        <NavLink to="/add-toys">Add A Toy</NavLink>
+                    </>}
                     <NavLink to="/blogs">Blogs</NavLink>
                 </div>
 
