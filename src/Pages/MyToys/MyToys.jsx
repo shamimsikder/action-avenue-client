@@ -13,7 +13,7 @@ const MyToys = () => {
     const {user} = useContext(AuthContext)
     const [toys, setToys] = useState([]);
 
-    useTitle("Mt Toys")
+    useTitle("My Toys")
 
     useEffect(() => {
         fetch(`https://action-avenue-server.vercel.app/myToys/${user?.email}`)
@@ -106,77 +106,8 @@ const MyToys = () => {
                                 </td>
                                 <td className="py-2 px-4 border-b">
                                     <span className='flex items-center justify-center gap-2'>
-                                    <label
-  className="flex items-center justify-center"
-  htmlFor={`my-modal-${toy._id}`}
-  data-aos="fade-right"
-  data-aos-duration="500"
->
-  <FaEdit className="text-[#65C3C8] cursor-pointer" />
-</label>
-<input type="checkbox" id={`my-modal-${toy._id}`} className="modal-toggle" />
-<div className="modal">
-  <div className="modal-box relative flex flex-col">
-    <label
-      htmlFor={`my-modal-${toy._id}`}
-      className="btn btn-primary text-white btn-sm btn-circle absolute right-2 top-2"
-    >
-      ✕
-    </label>
-    <img
-      src={toy.pictureUrl}
-      alt={toy.name}
-      className="w-96 h-96 rounded-md mx-auto object-cover mb-4"
-    />
-    <h3 className="text-lg text-start md:ml-10">
-      <span className="text-lg font-semibold">Toy Name</span>: {toy.name}
-    </h3>
-    <h3 className="text-lg text-start md:ml-10">
-      <span className="text-lg font-semibold">Seller Name</span>: {toy.sellerName}
-    </h3>
-    <h3 className="text-lg text-start md:ml-10">
-      <span className="text-lg font-semibold">Seller Email</span>: {toy.sellerEmail}
-    </h3>
-    <div className="mb-4">
-      <label htmlFor={`price-${toy._id}`} className="block font-semibold mb-2">
-        Price
-      </label>
-      <input
-        type="text"
-        id={`price-${toy._id}`}
-        className="border border-gray-300 rounded-md p-2 w-full"
-        defaultValue={toy.price}
-      />
-    </div>
-    <div className="mb-4">
-      <label htmlFor={`quantity-${toy._id}`} className="block font-semibold mb-2">
-        Available Quantity
-      </label>
-      <input
-        type="text"
-        id={`quantity-${toy._id}`}
-        className="border border-gray-300 rounded-md p-2 w-full"
-        defaultValue={toy.quantity}
-      />
-    </div>
-    <div className="mb-4">
-      <label htmlFor={`description-${toy._id}`} className="block font-semibold mb-2">
-        Detail Description
-      </label>
-      <textarea
-        id={`description-${toy._id}`}
-        className="border border-gray-300 rounded-md p-2 w-full"
-        defaultValue={toy.description}
-      />
-    </div>
-    <div className="modal-action">
-      <button type="submit" className="btn">
-        Update
-      </button>
-    </div>
-  </div>
-</div>
-                                    <FaTrash className='text-[#65C3C8] cursor-pointer' onClick={() => handleDeleteToy(toy._id)}/>
+                                        <FaEdit className="text-[#65C3C8] cursor-pointer" />
+                                        <FaTrash className='text-[#65C3C8] cursor-pointer' onClick={() => handleDeleteToy(toy._id)}/>
                                     </span>
                                 </td>
                             </motion.tr>

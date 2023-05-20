@@ -18,7 +18,7 @@ const Navbar = () => {
     }
 
     return (
-        <div className='sticky top-0'>
+        <div className=''>
             <div className="navbar bg-base-100 w-full max-w-7xl mx-auto font-julius">
                 
                 <div className="navbar-start">
