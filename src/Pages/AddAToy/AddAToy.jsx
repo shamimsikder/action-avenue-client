@@ -43,7 +43,7 @@ const AddAToy = () => {
             .then((result) => {
                 Swal.fire(
                     'Good job!',
-                    'Your Stored in Database!',
+                    'Your Toy Stored in Store!',
                     'success'
                 )
                 console.log(result);

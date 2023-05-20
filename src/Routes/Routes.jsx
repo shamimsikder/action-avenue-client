@@ -50,7 +50,7 @@ import ViewDetails from "../Pages/ViewDetails/ViewDetails";
         {
           path: "/view-details/:id",
           element: <ViewDetails></ViewDetails>,
-          loader: ({params}) => fetch(`http://localhost:5000/all-toys/${id}`)
+          loader: ({params}) => fetch(`http://localhost:5000/toy/${params.id}`)
         },
 
       ]
