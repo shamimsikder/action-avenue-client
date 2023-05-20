@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import useTitle from '../../Hooks/useTitle';
 import { useForm } from 'react-hook-form';
 import Select from 'react-select';
@@ -6,9 +6,12 @@ import { motion } from 'framer-motion';
 import { BsPlusCircle } from 'react-icons/bs';
 import Swal from 'sweetalert2/dist/sweetalert2.js';
 import 'sweetalert2/dist/sweetalert2.css';
+import { AuthContext } from '../../Providers/AuthProviders';
 
 
 const AddAToy = () => {
+
+    const {user} = useContext(AuthContext)
 
     useTitle('Add A Toy')
 
@@ -94,6 +97,7 @@ const AddAToy = () => {
                                 id="name"
                                 className="form-control outline-none border-[1px] w-full border-[#65C3C8] px-3 py-2 rounded-md mb-2 focus:ring-[#65C3C8] focus:border-[#65C3C8] transition-colors duration-300"
                                 placeholder="Enter Your"
+                                value={user.displayName}
                                 {...register('name')}
                             />
                         </div>
@@ -114,6 +118,7 @@ const AddAToy = () => {
                                 id="sellerEmail"
                                 className="form-control outline-none border-[1px] w-full border-[#65C3C8] px-3 py-2 rounded-md mb-2 focus:ring-[#65C3C8] focus:border-[#65C3C8] transition-colors duration-300"
                                 placeholder="Enter Your"
+                                value={user.email}
                                 {...register('sellerEmail')}
                             />
                         </div>
