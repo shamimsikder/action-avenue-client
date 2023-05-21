@@ -57,19 +57,19 @@ const MyToys = () => {
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(data),
           });
-      
+
           if (!response.ok) {
             throw new Error("Failed to update toy data.");
           }
-      
+
           const result = await response.json();
-      
+
           console.log(result);
           if (result.modifiedCount > 0) {
             const updatedDataResponse = await fetch(`https://action-avenue-server.vercel.app/myToys/${user?.email}`);
             const updatedData = await updatedDataResponse.json();
             setToys(updatedData);
-      
+
             toast.success("Toy Data Updated Successfully", {
               position: "top-center",
               autoClose: 1500,
@@ -80,21 +80,17 @@ const MyToys = () => {
               progress: undefined,
               theme: "light",
             });
-      
+
             setSelectedToy(null);
           }
         } catch (error) {
           console.error(error);
-          // Handle the error condition appropriately (e.g., show an error message)
         }
       };
-      
-      
-
 
     return (
         <div className="w-full max-w-7xl mx-auto py-8">
-            <h1 className="text-3xl font-semibold mb-6 text-center">All Toys</h1>
+            <h1 className="text-3xl font-semibold mb-6 text-center">My Toys</h1>
 
             <div className="overflow-x-auto">
                 <table

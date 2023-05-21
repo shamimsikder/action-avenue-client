@@ -1,6 +1,7 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Navigate, useLocation } from 'react-router-dom';
 import { AuthContext } from '../Providers/AuthProviders';
+import { ToastContainer, toast } from 'react-toastify';
 
 const PrivateRoutes = ({children}) => {
 
@@ -25,7 +26,31 @@ const PrivateRoutes = ({children}) => {
         return children
     }
 
-    return <Navigate to="/login" state={{ from: sessionStorage.getItem('currentLocation') }} replace />;
+    return <>
+                {toast.info('You have to log in first to view details', {
+                    position: "top-center",
+                    autoClose: 1500,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                })}
+        <Navigate to="/login" state={{ from: sessionStorage.getItem('currentLocation') }} replace />;
+        <ToastContainer
+                position="top-center"
+                autoClose={1500}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="light"
+         />
+    </>
 
 };
 

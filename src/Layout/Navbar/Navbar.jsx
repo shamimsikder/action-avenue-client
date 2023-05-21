@@ -2,6 +2,8 @@ import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import "./Navbar.css"
 import { AuthContext } from '../../Providers/AuthProviders';
+import { Tooltip } from 'react-tooltip'
+
 
 const Navbar = () => {
 
@@ -57,8 +59,8 @@ const Navbar = () => {
                         <div className='inline-flex items-center gap-2'>
 
                             <label tabIndex={0} className=" avatar">
-                                <div className="w-10 rounded-full">
-                                    <img src={user.photoURL} className="w-10 h-10 rounded-full" alt="" />
+                                <div className="w-10 rounded-full ">
+                                    <img src={user.photoURL} className="w-10 h-10 rounded-full" alt="" data-tooltip-id="my-tooltip" data-tooltip-content={user?.displayName}/>
                                 </div>
                             </label>
 
@@ -77,6 +79,8 @@ const Navbar = () => {
                 </div>
 
             </div>
+            <Tooltip id="my-tooltip" className='bg-[#65C3C8]'/>
+
         </div>
 
     );

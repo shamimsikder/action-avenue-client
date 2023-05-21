@@ -43,9 +43,13 @@ const ShopByCategory = () => {
                                         <p className="text-gray-600 mb-2">{toy.price}</p>
                                         <p className="text-gray-600 mb-2">Rating: {toy.rating}</p>
                                         
-                                        <button className="bg-[#65C3C8] hover:bg-[#529EA9] w-full text-white px-4 py-2 rounded-md text-center cursor-pointer" data-aos="fade-right" data-aos-duration="500">
-                                            View Details
-                                        </button>
+                                        <Link to={`/categories-view-details/${toy._id}`} toy={toy}>
+                                        
+                                            <button className="bg-[#65C3C8] hover:bg-[#529EA9] w-full text-white px-4 py-2 rounded-md text-center cursor-pointer" data-aos="fade-right" data-aos-duration="500">
+                                                View Details
+                                            </button>
+                                        
+                                        </Link>
                                         
                                     </div>
                                 ))}

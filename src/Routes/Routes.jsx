@@ -11,6 +11,8 @@ import AddAToy from "../Pages/AddAToy/AddAToy";
 import SignUp from "../Pages/SignUp/SignUp";
 import Error from "../Pages/Error/Error";
 import ViewDetails from "../Pages/ViewDetails/ViewDetails";
+import ShopByCategoriesDetails from "../Pages/Home/ShopByCategory/ShopByCategoriesDetails";
+import PrivateRoutes from "./PrivateRoutes";
   
   const router = createBrowserRouter([
     {
@@ -41,16 +43,20 @@ import ViewDetails from "../Pages/ViewDetails/ViewDetails";
         },
         {
           path: "my-toys",
-          element: <MyToys></MyToys>
+          element: <PrivateRoutes><MyToys></MyToys></PrivateRoutes>
         },
         {
           path: "add-toys",
-          element: <AddAToy></AddAToy>
+          element: <PrivateRoutes><AddAToy></AddAToy></PrivateRoutes>
         },
         {
           path: "/view-details/:id",
-          element: <ViewDetails></ViewDetails>,
+          element: <PrivateRoutes> <ViewDetails></ViewDetails></PrivateRoutes>,
           loader: ({params}) => fetch(`https://action-avenue-server.vercel.app/toy/${params.id}`)
+        },
+        {
+          path: "/categories-view-details/:id",
+          element: <PrivateRoutes><ShopByCategoriesDetails></ShopByCategoriesDetails></PrivateRoutes>
         },
 
       ]
