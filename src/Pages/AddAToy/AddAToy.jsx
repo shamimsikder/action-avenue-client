@@ -15,7 +15,7 @@ const AddAToy = () => {
 
     useTitle('Add A Toy')
 
-    const { register, handleSubmit, setValue } = useForm();
+    const { register, handleSubmit, setValue, reset } = useForm();
 
     const subcategories = [
         { value: 'avengers', label: 'Avengers' },
@@ -50,6 +50,8 @@ const AddAToy = () => {
                     'success'
                 )
                 console.log(result);
+                reset()
+                setValue('subcategory', null);
             });
         console.log(data);
 
