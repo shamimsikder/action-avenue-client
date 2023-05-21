@@ -1,11 +1,34 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaUser, FaEnvelope, FaTag, FaDollarSign, FaStar, FaBoxes, FaRegStar, FaStarHalfAlt } from 'react-icons/fa';
 import Rating from 'react-rating-stars-component';
+import { useParams } from 'react-router-dom';
 
 const ShopByCategoriesDetails = () => {
     
-    
+    const [categories, setCategories] = useState([]);
+
+    useEffect(() => {
+        fetch('./categories.json')
+        .then((res) => res.json())
+        .then((data) => setCategories(data));
+    }, []);
+
+    const {id} = useParams()
+
+    const toy = categories.map(category => category.subcategories.map((subcategory) => subcategory.toys.map((toy) => toy.find(parseInt(toy._id) === parseInt(id)))))
+    const {
+        pictureUrl,
+        name,
+        sellerName,
+        sellerEmail,
+        subcategory,
+        price,
+        rating,
+        quantity,
+        description,
+    } = toy;
+    console.log(toy)
 
     return (
         <div className="w-full max-w-7xl mx-auto py-8">

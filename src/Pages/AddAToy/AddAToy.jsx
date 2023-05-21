@@ -96,7 +96,7 @@ const AddAToy = () => {
                                 type="text"
                                 id="name"
                                 className="form-control outline-none border-[1px] w-full border-[#65C3C8] px-3 py-2 rounded-md mb-2 focus:ring-[#65C3C8] focus:border-[#65C3C8] transition-colors duration-300"
-                                placeholder="Enter Your"
+                                placeholder="Enter Toy Name"
                                 {...register('name')}
                             />
                         </div>
@@ -106,7 +106,7 @@ const AddAToy = () => {
                                 type="text"
                                 id="sellerName"
                                 className="form-control outline-none border-[1px] w-full border-[#65C3C8] px-3 py-2 rounded-md mb-2 focus:ring-[#65C3C8] focus:border-[#65C3C8] transition-colors duration-300"
-                                placeholder="Enter Your"
+                                placeholder="Enter Your Name"
                                 value={user?.displayName}
                                 {...register('sellerName')}
                             />
@@ -117,7 +117,7 @@ const AddAToy = () => {
                                 type="text"
                                 id="sellerEmail"
                                 className="form-control outline-none border-[1px] w-full border-[#65C3C8] px-3 py-2 rounded-md mb-2 focus:ring-[#65C3C8] focus:border-[#65C3C8] transition-colors duration-300"
-                                placeholder="Enter Your"
+                                placeholder="Enter Your E-mail"
                                 value={user?.email}
                                 {...register('sellerEmail')}
                             />
@@ -140,7 +140,7 @@ const AddAToy = () => {
                                 type="text"
                                 id="price"
                                 className="form-control outline-none border-[1px] w-full border-[#65C3C8] px-3 py-2 rounded-md mb-2 focus:ring-[#65C3C8] focus:border-[#65C3C8] transition-colors duration-300"
-                                placeholder="Enter Your"
+                                placeholder="Enter Toy Price (Without $ Sign)"
                                 {...register('price')}
                             />
                         </div>
@@ -151,7 +151,7 @@ const AddAToy = () => {
                                 id="rating"
                                 step="0.1"
                                 className="form-control outline-none border-[1px] w-full border-[#65C3C8] px-3 py-2 rounded-md mb-2 focus:ring-[#65C3C8] focus:border-[#65C3C8] transition-colors duration-300"
-                                placeholder="Enter Your"
+                                placeholder="Rating"
                                 {...register('rating')}
                             />
                         </div>
@@ -161,7 +161,7 @@ const AddAToy = () => {
                                 type="number"
                                 id="quantity"
                                 className="form-control outline-none border-[1px] w-full border-[#65C3C8] px-3 py-2 rounded-md mb-2 focus:ring-[#65C3C8] focus:border-[#65C3C8] transition-colors duration-300"
-                                placeholder="Enter Your"
+                                placeholder="Quantity"
                                 {...register('quantity')}
                             />
                         </div>

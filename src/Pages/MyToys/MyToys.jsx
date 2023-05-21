@@ -86,7 +86,7 @@ const MyToys = () => {
         } catch (error) {
           console.error(error);
         }
-      };
+    };
 
     return (
         <div className="w-full max-w-7xl mx-auto py-8">
@@ -129,7 +129,7 @@ const MyToys = () => {
                                             <h3 className="text-lg text-start md:ml-10"><span className='text-lg font-semibold'>Toy Name</span>: {toy.name}</h3>
                                             <h3 className="text-lg text-start md:ml-10"><span className='text-lg font-semibold'>Seller Name</span>: {toy.sellerName}</h3>
                                             <h3 className="text-lg text-start md:ml-10"><span className='text-lg font-semibold'>Seller Email</span>: {toy.sellerEmail}</h3>
-                                            <h3 className="text-lg text-start md:ml-10"><span className='text-lg font-semibold'>Price</span>: {toy.price}</h3>
+                                            <h3 className="text-lg text-start md:ml-10"><span className='text-lg font-semibold'>Price</span>: ${toy.price}</h3>
                                             <h3 className="text-lg text-start md:ml-10"><span className='text-lg font-semibold'>Quantity</span>: {toy.quantity}</h3>
                                             <h3 className="text-lg text-start md:ml-10"><span className='text-lg font-semibold'>Rating</span>: {toy.rating}</h3>
                                             <p className="py-4 md:ml-10 text-start">{toy.description}</p>
