@@ -5,15 +5,17 @@ import { FaEdit, FaTrash } from 'react-icons/fa';
 import { FiEye } from 'react-icons/fi';
 import { ToastContainer, toast } from 'react-toastify';
 import { useForm } from 'react-hook-form';
-
+import { FaSortUp, FaSortDown } from 'react-icons/fa';
+import Swal from 'sweetalert2';
 
 
 const MyToys = () => {
-
+    
     const {user} = useContext(AuthContext)
     const [toys, setToys] = useState([]);
     const [selectedToy, setSelectedToy] = useState(null);
     const { register, handleSubmit } = useForm();
+    const [sortOrder, setSortOrder] = useState("ascending"); 
 
     useTitle("My Toys")
 
@@ -25,9 +27,30 @@ const MyToys = () => {
             setToys(data);
           });
     }, []);
+
+    //sort
+    useEffect(() => {
+        fetch(`https://action-avenue-server.vercel.app/myToys/${user?.email}/${sortOrder}`)
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+            setToys(data);
+          });
+      }, [user?.email, sortOrder]);
+      
     
     const handleDeleteToy = (toyId) => {
         
+        Swal.fire({
+            title: 'Are you sure?',
+            text: 'You are about to delete this toy.',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#d33',
+            cancelButtonColor: '#3085d6',
+            confirmButtonText: 'Yes, delete it!',
+          }).then((result) => {
+            if (result.isConfirmed) {
           fetch(`https://action-avenue-server.vercel.app/myToys/${toyId}`, {
             method: 'DELETE',
           })
@@ -47,7 +70,8 @@ const MyToys = () => {
               console.log(data);
             })
             .catch((error) => console.error(error));
-        
+        }
+    });
     };
 
     const handleUpdateToy = async (data) => {
@@ -88,9 +112,26 @@ const MyToys = () => {
         }
     };
 
+    // Sort 
+
+
     return (
         <div className="w-full max-w-7xl mx-auto py-8">
             <h1 className="text-3xl font-semibold mb-6 text-center">My Toys</h1>
+
+            <div className="items-center mx-auto text-center mb-4">
+                
+                <div>
+                    <button className="px-4 py-2 bg-[#65C3C8] text-white rounded-md hover:bg-[#529EA9] transition duration-300" onClick={() => setSortOrder("ascending")}>
+                        <FaSortUp className="inline" />
+                        Sort Ascending
+                    </button>
+                    <button className="px-4 py-2 bg-[#65C3C8] text-white rounded-md hover:bg-[#529EA9] transition duration-300 ml-2" onClick={() => setSortOrder("descending")}>
+                        <FaSortDown className="inline" />
+                        Sort Descending
+                    </button>
+                </div>
+            </div>
 
             <div className="overflow-x-auto">
                 <table

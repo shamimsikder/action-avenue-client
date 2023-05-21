@@ -44,7 +44,7 @@ const AllToys = () => {
         <div className="w-full max-w-7xl mx-auto py-8">
         <h1 className="text-3xl font-semibold mb-6 text-center">All Toys</h1>
 
-        <div className="flex items-center justify-between mb-4">
+        <div className="flex gap-5 flex-col md:flex-row items-center justify-between mb-4">
             <div className='inline-flex items-center gap-2'>
                 <input
                     type="text"
