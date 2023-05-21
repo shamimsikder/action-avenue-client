@@ -20,7 +20,7 @@ const AllToys = () => {
 
     const handleSearch = () => {
 
-        fetch(`https://action-avenue-server.vercel.app/allToys/${searchInput}`)
+        fetch(`https://action-avenue-server.vercel.app/searchToys/${searchInput}`)
         
             .then((res) => res.json())
             .then((data) => {
