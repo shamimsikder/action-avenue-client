@@ -3,9 +3,9 @@ import { motion } from 'framer-motion';
 import { FaUser, FaEnvelope, FaTag, FaDollarSign, FaStar, FaBoxes, FaRegStar, FaStarHalfAlt } from 'react-icons/fa';
 import Rating from 'react-rating-stars-component';
 
-const ShopByCategoriesDetails = ({toy}) => {
+const ShopByCategoriesDetails = () => {
     
-    const { name, pictureUrl, sellerName, sellerEmail, subcategory, price, rating, quantity, description } = toy;
+    
 
     return (
         <div className="w-full max-w-7xl mx-auto py-8">

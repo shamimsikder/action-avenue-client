@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Link } from 'react-router-dom';
 
 const ShopByCategory = () => {
   const [categories, setCategories] = useState([]);
+
 
   useEffect(() => {
     fetch('./categories.json')
@@ -16,6 +16,7 @@ const ShopByCategory = () => {
       AOS.init();
   }, []);
 
+ 
   return (
     <div className="w-full max-w-7xl mx-auto py-8">
 
@@ -43,14 +44,13 @@ const ShopByCategory = () => {
                                         <p className="text-gray-600 mb-2">{toy.price}</p>
                                         <p className="text-gray-600 mb-2">Rating: {toy.rating}</p>
                                         
-                                        <Link to={`/categories-view-details/${toy._id}`} toy={toy}>
+                                        <Link to={`/categories-view-details/${toy._id}`}>
                                         
                                             <button className="bg-[#65C3C8] hover:bg-[#529EA9] w-full text-white px-4 py-2 rounded-md text-center cursor-pointer" data-aos="fade-right" data-aos-duration="500">
                                                 View Details
                                             </button>
-                                        
+                                            
                                         </Link>
-                                        
                                     </div>
                                 ))}
                             </div>
