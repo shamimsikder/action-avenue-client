@@ -109,11 +109,11 @@ const MyToys = () => {
             <div className="items-center mx-auto text-center mb-4">
                 
                 <div>
-                    <button className="px-4 py-2 bg-[#65C3C8] text-white rounded-md hover:bg-[#529EA9] transition duration-300" >
+                    <button  className="px-4 py-2 bg-[#65C3C8] text-white rounded-md hover:bg-[#529EA9] transition duration-300" >
                         <FaSortUp className="inline" />
                         Sort Ascending
                     </button>
-                    <button className="px-4 py-2 bg-[#65C3C8] text-white rounded-md hover:bg-[#529EA9] transition duration-300 ml-2">
+                    <button  className="px-4 py-2 bg-[#65C3C8] text-white rounded-md hover:bg-[#529EA9] transition duration-300 ml-2">
                         <FaSortDown className="inline" />
                         Sort Descending
                     </button>

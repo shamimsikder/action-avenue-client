@@ -40,6 +40,8 @@ const AllToys = () => {
 
     }, [allToys]);
 
+    const visibleToyData = allToysData.slice(0, visibleToys);
+
     return (
         <div className="w-full max-w-7xl mx-auto py-8">
         <h1 className="text-3xl font-semibold mb-6 text-center">All Toys</h1>
@@ -76,7 +78,7 @@ const AllToys = () => {
                 </tr>
             </thead>
             <tbody className="table-auto">
-                {allToysData.map((toy) => (
+                {visibleToyData.map((toy) => (
                 <motion.tr
                     key={toy._id}
                     variants={rowVariants}
