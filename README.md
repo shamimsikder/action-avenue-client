@@ -6,7 +6,6 @@ Toy Marketplace is a full-stack website designed to create a simple and visually
  
 - Categorized showcase of toys with detailed information and search functionality. 
 - User profiles, order history, saved toys, and the ability to add and sell toys. 
-- A visually appealing website design with customized components. 
 - Secure registration and login system with error messaging. 
 - Informative and engaging blog section related to toys and the chosen category. 
  
